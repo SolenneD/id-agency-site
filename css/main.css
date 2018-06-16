@@ -254,7 +254,10 @@ p{
 .courbe{
 	position: absolute;
 	width: 100vw;
-	bottom: -40px;
+	bottom: -53px;
+}
+.courbe_image{
+	width: 100%;
 }
 .fas.fa-angle-down{
 	position: relative;
@@ -331,6 +334,7 @@ input[type="submit"]{
 	width: 117px;
 	height: 38px;
 	line-height: 8px;
+	cursor:pointer;
 }
 input[type="checkbox"]{
 	width: auto;
