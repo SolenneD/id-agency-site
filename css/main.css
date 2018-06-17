@@ -66,6 +66,7 @@
 .footer>.img-footer{
 	position: inherit;
 }
+
 .menu .logo{
 	display: inline;
 }
@@ -77,6 +78,7 @@
 .logo{
 	float: left;
 }
+
 /*NAV BURGER MENU*/
 #menu a:hover {
 	color: #a4a4a4;
@@ -199,6 +201,8 @@
 #menuToggle input:checked ~ #menu {
 	transform: none;
 }
+/*fin menu burger*/
+
 .parallax {
 	/*!* The image used *!*/
 	/*background-image: url("../src/.jpg");*/
@@ -349,58 +353,120 @@ textarea{
 
 /****** PAGE A PROPOS NOUS ********/
 #page-apropos{
-	margin-bottom: 25%;
+	margin-bottom: 20%;
 }
-.nous{
+.photo-1{
+	background-image: url(../src/nous/1.jpg);
+}
+.photo-2{
+	background-image: url(../src/nous/2.jpg);
+}
+.photo-3{
+	background-image: url(../src/nous/3.jpg);
+}
+.photo-4{
+	background-image: url(../src/nous/4.jpg);
+}
+.photo-5{
+	background-image: url(../src/nous/5.jpg);
+}
+.photo-6{
+	background-image: url(../src/nous/6.jpg);
+}
+.photo-7{
+	background-image: url(../src/nous/7.jpg);
+}
+.photo-8{
+	background-image: url(../src/nous/8.jpg);
+}
+.photo-9{
+	background-image: url(../src/nous/9.jpg);
+}
+.flip-container {
+	perspective: 1000px;
+	margin: 15px;
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+	width: 120px;
+	height: 120px;
+}
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
-	background-color: black;
-	margin:10px 10px;
-	background-size: cover;
-	background-position: center;
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
+	background-size: cover;
+	background-position: center;
 }
-#photo-1{
-	background-image: url(../src/nous/1.jpg);
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
 }
-#photo-1:hover{
-	animation: flip 2.5s ease;
-	
-	transition: 0.7s;
-	transform-style: preserve-3d;
-
+.back {
+	transform: rotateY(180deg);
+	opacity: .8;
+	background-color: #000000;
 }
-#photo-2{
-	background-image: url(../src/nous/2.jpg);
+.back>div>p{
+	text-align: center;
+	font-size: 11px;
+	width: auto;
+	margin-bottom: 5px;
+	color: #ffffff;
 }
-#photo-3{
-	background-image: url(../src/nous/3.jpg);
+.back>div>p:first-child{
+	font-weight: 400;
 }
-#photo-4{
-	background-image: url(../src/nous/4.jpg);
+.div-back{
+	margin-top: 40%;
 }
-#photo-5{
-	background-image: url(../src/nous/5.jpg);
+.decoration-rond{
+	background: rgb(156,156,156);
+	background: -moz-linear-gradient(45deg, rgba(156,156,156,1) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(156,156,156,1) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(45deg, rgba(156,156,156,1) 0%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c9c9c', endColorstr='#ffffff',GradientType=1 );
+	border-radius: 50%;
+	position: absolute;
+	z-index: -2;
+	opacity: .5;
 }
-#photo-6{
-	background-image: url(../src/nous/6.jpg);
+.decoration-rond-1{
+	height: 190px;
+	width: 190px;
+	top: 170px;
+	right: 130px;
 }
-#photo-7{
-	background-image: url(../src/nous/7.jpg);
+.decoration-rond-2{
+	height: 50px;
+	width: 50px;
+	right: 600px;
+	bottom: 220px;
 }
-#photo-8{
-	background-image: url(../src/nous/8.jpg);
+.decoration-rond-3{
+	height: 100px;
+	width: 100px;
+	right: 465px;
+	top: 155px;
 }
-#photo-9{
-	background-image: url(../src/nous/9.jpg);
-}
-
-
 
 /******** RS ***********/
 .rs-desktop{
@@ -421,7 +487,126 @@ textarea{
 	display: none;
 }
 
+/****** PAGE MODE TEST ********/
+#page-lesmodes{
+	margin-bottom: 5%;
+}
+.rond-mode{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #cccccc;
+	vertical-align: middle;
+	float: left;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+.champ-mode-petit{
+	border-radius: 10px;
+	background-color: #000000;
+	background-image: url(../src/labague/vague-labague.svg);
+	background-position: bottom right;
+	background-position-y: 30%;
+	background-repeat: no-repeat;
+	width: 360px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+.champ-mode-blanc.moyen-blanc{
+	font-size: 14px;
+	text-align: left;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	width: auto;
+}
+.champ-mode-blanc.petit-blanc{
+	font-size: 12px;
+	text-align: left;
+	margin-bottom: 10px;
+	padding-top: 0;
+	width: auto;
+}
+.droit-mode{
+	float: right;
+	width: 70%;
+}
 
+/****** PAGE LA BAGUE ********/
+.labague{
+	background-image: url("../src/labague/header-labague.svg");
+}
+#page-labague{
+	margin-bottom: 20%;
+}
+.fond-labague {
+	position: absolute;
+	z-index: -1;
+}
+#champ-mode{
+	position: absolute;
+	width: 1025px;
+	height: 231px;
+	border-radius: 10px;
+	background-color: #000000;
+	background-image: url("../src/labague/vague-labague.svg");
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+.champ-mode-blanc{
+	font-size: 24px;
+	text-align: center;
+	color: #ffffff;
+	width: 100%;
+	padding-top: 50px;
+}
+.video{
+	width: 778px;
+	height: 438px;
+	background-color: black;
+	color: #ffffff;
+	margin: auto;
+}
+.caracteristique{
+	text-align: center;
+}
+.caracteristique>p{
+	width: auto;
+}
+
+/******* 404 ******/
+#page-404{
+	margin-bottom: 5%;
+}
+#page-404>p{
+	text-align: center;
+	width: auto;
+}
+#page-404 .image-erreur{
+	height: 440px;
+	width: 410px;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url("../src/labombe-oeil-ferme.png");
+}
+.erreur-404{
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	font-size: 300px;
+	position: absolute;
+	color: rgb(125,126,125);
+}
+.erreur-404#chiffre-1{
+	top: 100px;
+	left: 290px;
+}
+.erreur-404#chiffre-2{
+	top: 100px;
+	right: 290px;
+}
 
 /******* RESPONSIVE ********/
 /*tablette*/
@@ -436,5 +621,28 @@ textarea{
 	/*pas de parallax*/
 	.parallax {
 		background-attachment: scroll;
+	}
+	.row{
+		display: block;
+	}
+	.col-6, .col-6 p, p{
+		width: 100%;
+	}
+	.col-10{
+		width: 95%;
+	}
+
+	/*page à propos*/
+	#page-apropos .col-6.row{
+		display: flex;
+		flex-direction: row;
+	}
+	#page-apropos .col-6.row div .flip-container{
+		margin: 0;
+		margin-right: 10px;
+		margin-bottom: 15px;
+	}
+	#page-apropos .col-6.row div:last-child .flip-container{
+		margin-right: 0;
 	}
 }
