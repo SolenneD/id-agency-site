@@ -56,6 +56,9 @@
 	margin: auto;
 }
 /******* GENERAL ********/
+.clear{
+	clear: both;
+}
 .header{
 	height: 100px;
 }
@@ -608,6 +611,184 @@ textarea{
 	right: 290px;
 }
 
+
+
+/****** QUESTIONNAIRE ********/
+#background-questionnaire{
+	background-color: #000000;
+}
+#q2{
+	margin-top: 50px;
+}
+#q2>h2{
+	color: #ffffff;
+	margin-bottom: 70px;
+}
+#q2>.trait{
+	background-color: #ffffff;
+}
+#q2>form{
+	color: #ffffff;
+	font-weight: 200;
+}
+#q2>form>input{
+	width: auto;
+	display: inline;
+	margin-right: 20px;
+	margin-bottom: 40px;
+	padding: 5px;
+}
+#q2>form>input[type="submit"]{
+	color: #ffffff;
+	width: 120px;
+	background-color: transparent;
+	text-transform: uppercase;
+	float: right;
+	border: 1px solid #ffffff;
+
+}
+#q2>form>input[type="submit"]:hover{
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #000000;
+
+}
+#q2>form>input:checked{
+	background-color: #ffffff;
+}
+#q2 + footer>.img-footer>svg{
+	bottom: inherit;
+	width: 100%;
+}
+#q2 + footer>.img-footer, #q2 + footer>.img-footer>svg{
+	position: relative;
+}
+#q2 + footer{
+	position: absolute;
+	bottom: inherit;
+	z-index: -3;
+}
+#q2>.etapes>.question{
+	border-radius: 50%;
+	padding: 5px;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	opacity: .5;
+}
+#q2>.etapes>.question.prev{
+	border-radius: 50%;
+	padding: 5px;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	border: 1px solid #ffffff;
+	color: #ffffff;
+	opacity: 1;
+}
+#q2>.etapes>.question.active{
+	border-radius: 50%;
+	padding: 5px;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	background-color: #ffffff;
+	color: #000000;
+	opacity: 1;
+}
+#q2>.etapes>.question.result{
+	border-radius: 5px;
+	width: 80px;
+}
+#q2>.etapes>.trait-q{
+	width: 25px;
+	height: 2px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	margin: 0 15px;
+	margin-top: 15px;
+}
+#q2>.etapes{
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+
+/*result*/
+#q2 article.rockattitude h4, #q2 article.rockattitude p{
+	color: #ffffff;
+	font-size: 14px;
+}
+#q2 article.rockattitude h4{
+	text-transform: uppercase;
+	font-weight: 800;
+	margin-bottom: 25px;
+}
+#q2 article.rockattitude p{
+	font-style: italic;
+	color: #C4C4C4;
+	line-height: 21px;
+	width: auto;
+	margin-bottom: 80px;
+
+}
+#q2 div:last-child p{
+	text-align: center;
+	color: #ffffff;
+	width: auto;
+}
+#q2 div:last-child p>span{
+	font-weight: 800;
+}
+#q2 div:last-child a{
+	background-color: #ffffff;
+	color: #000000;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 100px;
+	margin: auto;
+	display: block;
+	width: 110px;
+}
+.bar-progress{
+	margin-bottom: 25px;
+}
+progress::-webkit-progress-bar {
+	background: transparent ;
+}
+progress::-moz-progress-bar {
+	background: transparent ;
+}
+progress::-webkit-progress-value {
+	background: #4F4F4F;
+	border-radius: 100px;
+}
+.avancement{
+	width: 60%;
+	border: 1px solid #ffffff;
+	border-radius: 100px;
+	padding: 5px;
+	margin-right: 10px;
+	background-color: transparent;
+	color: #ffffff;
+}
+.theme{
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
 /******* RESPONSIVE ********/
 /*tablette*/
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -644,5 +825,18 @@ textarea{
 	}
 	#page-apropos .col-6.row div:last-child .flip-container{
 		margin-right: 0;
+	}
+
+	/*questionnaire*/
+	#q2>.row{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+	}
+	#q2>.etapes>.trait-q {
+		display: none;
+	}
+	#q2>.etapes>.question {
+		margin: 6px;
 	}
 }
