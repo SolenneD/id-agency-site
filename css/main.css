@@ -4,7 +4,9 @@
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
 }
-
+body{
+	overflow-x: hidden;
+}
 /*********** GRILLE *********/
 .row {
 	display:flex;
@@ -80,6 +82,9 @@
 }
 .logo{
 	float: left;
+}
+input:focus {
+	outline: none;
 }
 .logo > a > .desktop{
 	display: block;
@@ -257,6 +262,9 @@ p{
 	font-size: 14px;
 	line-height: 35px;
 }
+.btn:hover{
+	color: #666666;
+}
 .btn.blanc{
 	color: #ffffff;
 	background-color: #000000;
@@ -277,8 +285,9 @@ p{
 	margin-bottom: 20px;
 	background: #000000;
 	height: 4px;
-	-webkit-transition: .4s cubic-bezier(.175,.885,.32,1.275).8s;
-	transition: .4s cubic-bezier(.175,.885,.32,1.275).8s;
+	border-radius: 5px;
+	/*-webkit-transition: .4s cubic-bezier(.175,.885,.32,1.275).8s;*/
+	/*transition: .4s cubic-bezier(.175,.885,.32,1.275).8s;*/
 }
 .right{
 	float: right;
@@ -359,6 +368,9 @@ p{
 	line-height: 35px;
 	margin: auto;
 }
+.title-home .btn-question:hover{
+	background-color: #F2F2F2;
+}
 .title-home>.title-accueil{
 	text-align: center;
 	font-size: 24px;
@@ -367,16 +379,22 @@ p{
 }
 
 /****** PAGE CONTACT ********/
+section#page-contact {
+	margin-bottom: 5%;
+}
 input, textarea{
 	display: block;
 	width: 300px;
 	padding: 15px 5px;
 	background-color: transparent;
-	color: #c4c4c4;
+	color: #000000;
 	font-size: 14px;
 	border: none;
 	border-bottom: 2px solid #828282;
 	margin-bottom: 10px;
+}
+textarea{
+	margin-bottom: 30px;
 }
 input[type="submit"]{
 	background-color: #000000;
@@ -385,16 +403,53 @@ input[type="submit"]{
 	height: 38px;
 	line-height: 8px;
 	cursor:pointer;
+	color: #ffffff;
+	text-transform: uppercase;
 }
-input[type="checkbox"]{
-	width: auto;
-	display: inline;
-	margin-right: 5px;
-	margin-bottom: 35px;
+input[type="submit"]:hover{
+	color: #666666;
+}
+form .align-input{
+	display: flex;
+}
+form .align-input:first-child{
+	margin-right: 40px;
+}
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 0;
+	width: 13px;
+	height: 13px;
+	transition: 0.2s all linear;
+	border: 0px solid #000000;
+	box-shadow: 0 0 1px 1px #303030;
+	margin-right: 15px;
+	position: relative;
+}
+input[type="checkbox"]:checked {
+	background-color:#000;
+	border: 2px solid #ffffff;
 }
 textarea{
 	max-width: 300px;
 	height: 80px;
+}
+form .align-input>a{
+	text-decoration: none;
+}
+.download{
+	display: inline-block;
+	margin-right: 10px;
+	height: 14px;
+	width: 16px;
+	background-image: url(../src/download.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#p-download{
+	display: inline-block;
+	color: #000;
 }
 
 /****** PAGE A PROPOS NOUS ********/
@@ -683,6 +738,16 @@ textarea{
 #page-404{
 	margin-bottom: 5%;
 }
+#page-404 a:hover{
+	color: #666666;
+}
+#page-404 a{
+	position: relative;
+	z-index: 2;
+	color: #ffffff;
+	background-color: #000000;
+	margin: auto;
+}
 #page-404>p{
 	text-align: center;
 	width: auto;
@@ -728,22 +793,13 @@ textarea{
 #q2>.trait{
 	background-color: #ffffff;
 }
+
 #q2>form{
 	color: #ffffff;
 	font-weight: 200;
 }
-#q2>form>input{
-	width: auto;
-	display: inline;
-	margin-right: 20px;
-	margin-bottom: 40px;
-	padding: 5px;
-	background-color: transparent;
-	border: 1px solid #ffffff;
-}
-#q2>form>input:checked{
-	border: 1px solid #ffffff;
-	background-color: transparent;
+#q2>form>p.align-input{
+	display: flex;
 }
 #q2>form>input[type="submit"]{
 	color: #ffffff;
@@ -756,13 +812,26 @@ textarea{
 }
 #q2>form>input[type="submit"]:hover{
 	cursor: pointer;
-	background-color: #ffffff;
-	color: #000000;
+	background-color: #F2F2F2;
+}
+#q2 input[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 0;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	transition: 0.2s all linear;
+	border: 1px solid #000000;
+	box-shadow: 0 0 4px 1px #fff;
+	margin-right: 15px;
+	position: relative;
+}
+#q2 input[type="radio"]:checked {
+	background-color:#fff;
+	border: 4px solid #000;
+}
 
-}
-#q2>form>input:checked{
-	background-color: #ffffff;
-}
 #q2 + footer>.img-footer>svg{
 	bottom: inherit;
 	width: 100%;
@@ -772,9 +841,10 @@ textarea{
 }
 #q2 + footer{
 	position: absolute;
-	bottom: 0;
+	bottom: inherit;
 	z-index: -3;
 }
+
 #q2>.etapes>.question{
 	border-radius: 50%;
 	padding: 5px;
@@ -784,6 +854,7 @@ textarea{
 	border: 1px solid #ffffff;
 	color: #ffffff;
 	opacity: .5;
+	text-decoration: none;
 }
 #q2>.etapes>.question.prev{
 	border-radius: 50%;
@@ -861,6 +932,9 @@ textarea{
 	display: block;
 	width: 110px;
 }
+#q2 div:last-child a:hover{
+	background-color: #F2F2F2;
+}
 .bar-progress{
 	margin-bottom: 25px;
 }
@@ -904,6 +978,9 @@ progress::-webkit-progress-value {
 	font-size: 14px;
 	line-height: 35px;
 	margin-top: 10%;
+}
+#q2 .btn-question:hover{
+	background-color: #F2F2F2;
 }
 
 /******* RESPONSIVE ********/

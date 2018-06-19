@@ -79,18 +79,17 @@
 
 
     <div class="etapes row">
-        <a class="question q-1 prev">1</a>
+        <a href="q1.html" class="question q-1 prev">1</a>
         <div class="trait-q"></div>
-        <a class="question q-2 active">2</a>
+        <a href="q2.html" class="question q-2 active">2</a>
         <div class="trait-q"></div>
-        <a class="question q-3">3</a>
+        <a href="q3.html" class="question q-3">3</a>
         <div class="trait-q"></div>
-        <a class="question q-4">4</a>
+        <a href="q4.html" class="question q-4">4</a>
         <div class="trait-q"></div>
-        <a class="question q-5">5</a>
+        <a href="q5.html" class="question q-5">5</a>
         <div class="trait-q"></div>
-        <a class="question result">Résultat</a>
-
+        <a href="qresult.html" class="question result">Résultat</a>
     </div>
 
 
@@ -99,14 +98,20 @@
 
 
     <form action="">
-        <input id="celibataire" type="radio" name="situation" value="celibataire">Célibataire<br>
-        <label for="celibataire"></label>
+        <p class="align-input">
+            <input id="celibataire" type="radio" name="situation" value="celibataire">Célibataire<br>
+            <label for="celibataire"></label>
+        </p>
 
-        <input id="couple" type="radio" name="situation" value="couple">En couple<br>
-        <label for="couple"></label>
+        <p class="align-input">
+            <input id="couple" type="radio" name="situation" value="couple">En couple<br>
+            <label for="couple"></label>
+        </p>
 
-        <input id="libre" type="radio" name="situation" value="libre">En relation libre<br>
-        <label for="libre"></label>
+        <p class="align-input">
+            <input id="libre" type="radio" name="situation" value="libre">En relation libre<br>
+            <label for="libre"></label>
+        </p>
 
         <input type="submit" value="Suivant">
     </form>
