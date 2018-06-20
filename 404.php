@@ -74,10 +74,13 @@
     </div>
 </header>
 <section id="page-404" class="container col-10">
-    <div style="margin-bottom: 30px">
-        <span id="chiffre-1" class="erreur-404">4</span>
+    <div class="row" style="margin-bottom: 50px">
+        <div class="col-6"><span id="chiffre-1" class="erreur-404">4</span></div>
+
         <div class="image-erreur"></div>
-        <span id="chiffre-2" class="erreur-404">4</span>
+
+        <div class="col-6"><span id="chiffre-2" class="erreur-404">4</span></div>
+
     </div>
     <p>Psst... Il semblerait que vous n’êtes pas là où vous devriez être... </p>
 

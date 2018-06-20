@@ -468,7 +468,7 @@ form .align-input>a{
 
 /****** PAGE A PROPOS NOUS ********/
 #page-apropos{
-	margin-bottom: 20%;
+	margin-bottom: 10%;
 }
 .photo-1{
 	background-image: url(../src/nous/1.jpg);
@@ -814,12 +814,17 @@ a.test-mode:hover{
 	width: auto;
 }
 #page-404 .image-erreur{
-	height: 440px;
-	width: 410px;
+	height: 360px;
+	width: 330px;
 	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	background-image: url("../src/404/labombe-oeil-ferme.gif");
 }
 .erreur-404{
@@ -827,17 +832,16 @@ a.test-mode:hover{
 	font-style: normal;
 	font-weight: 600;
 	line-height: normal;
-	font-size: 300px;
-	position: absolute;
+	font-size: 280px;
 	color: rgb(125,126,125);
 }
 .erreur-404#chiffre-1{
-	top: 100px;
-	left: 290px;
+	float: right;
+	margin-right: 130px;
 }
 .erreur-404#chiffre-2{
-	top: 100px;
-	right: 290px;
+	margin-left: 120px;
+	float: left;
 }
 
 /****** QUESTIONNAIRE ********/
@@ -1141,6 +1145,32 @@ progress::-webkit-progress-value {
 		flex-wrap: wrap;
 		width: 90%;
 		margin: auto;
+	}
+
+
+	/*erreur 404*/
+	#page-404 .image-erreur {
+		height: 240px;
+		width: 220px;
+		top: 40%;
+	}
+	#page-404>div.row{
+		display: flex;
+		margin-bottom: 80px !important;
+	}
+	#page-404>div.row>.col-6{
+		width: 49%;
+	}
+	.erreur-404{
+		font-size: 180px;
+	}
+	.erreur-404#chiffre-2 {
+		margin-left: 80px;
+		margin-top: 30px;
+	}
+	.erreur-404#chiffre-1 {
+		margin-right: 75px;
+		margin-top: 30px;
 	}
 
 
