@@ -86,13 +86,13 @@
             <input required type="email" name="mail" id="email" placeholder="Adresse email">
             <textarea required name="message" placeholder="Message" id="message" tabindex="4" cols="30" rows="8"></textarea>
 
-            <div style="display: inline-flex;">
+            <div id="btn-checkbox">
                 <div class="align-input">
                     <input type="checkbox">
                     <label>S’inscrire à la newsletter</label>
                 </div>
                 <div class="align-input">
-                    <a href="">
+                    <a href="" download="kit-presse">
                         <div class="download"></div>
                         <p id="p-download">Télécharger le kit presse</p>
                     </a>
@@ -110,7 +110,7 @@
 
 
 
-<footer>
+<footer class="footer">
 
 
     <div class="img-footer">
@@ -118,8 +118,17 @@
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
+
 
 </footer>
 
