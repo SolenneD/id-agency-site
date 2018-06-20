@@ -62,12 +62,12 @@
                 <span></span>
                 <span></span>
                 <div id="menu">
-                    <a href="index.html">Home</a>
-                    <a href="labague.html">La Bague</a>
-                    <a href="solo.html">Les Modes</a>
-                    <a href="propos-nous.html">À propos</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="index.php">Home</a>
+                    <a href="labague.php">La Bague</a>
+                    <a href="solo.php">Les Modes</a>
+                    <a href="propos-nous.php">À propos</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="mentions-legales.php">Mentions Légales</a>
                 </div>
             </div>
         </nav>

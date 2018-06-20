@@ -63,12 +63,12 @@
                 <span></span>
                 <span></span>
                 <div id="menu">
-                    <a href="index.html">Home</a>
-                    <a href="labague.html">La Bague</a>
-                    <a href="solo.html">Les Modes</a>
-                    <a href="propos-nous.html">À propos</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="index.php">Home</a>
+                    <a href="labague.php">La Bague</a>
+                    <a href="solo.php">Les Modes</a>
+                    <a href="propos-nous.php">À propos</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="mentions-legales.php">Mentions Légales</a>
                 </div>
             </div>
         </nav>
@@ -76,12 +76,45 @@
 </header>
 
 <section id="q2" class="container col-10">
+
+
+    <div class="etapes row">
+        <p href="q1.html" class="question q-1 prev">1</p>
+        <div class="trait-q"></div>
+        <p href="q2.html" class="question q-2 active">2</p>
+        <div class="trait-q"></div>
+        <p href="q3.html" class="question q-3">3</p>
+        <div class="trait-q"></div>
+        <p href="q4.html" class="question q-4">4</p>
+        <div class="trait-q"></div>
+        <p href="q5.html" class="question q-5">5</p>
+        <div class="trait-q"></div>
+        <p href="qresult.html" class="question result">Résultat</p>
+    </div>
+
+
     <div class="trait"></div>
-    <h2>Quelle est votre niveau de Rock'Attitude ?</h2>
+    <h2>Vous êtes ?</h2>
 
-    <p>Découvrez quelle fonctionnalité est faite pour vous ! </p>
 
-    <a href="q1.html" class="btn-question">Commencer le test</a>
+    <form action="">
+        <p class="align-input">
+            <input id="celibataire" type="radio" name="situation" value="celibataire">Célibataire<br>
+            <label for="celibataire"></label>
+        </p>
+
+        <p class="align-input">
+            <input id="couple" type="radio" name="situation" value="couple">En couple<br>
+            <label for="couple"></label>
+        </p>
+
+        <p class="align-input">
+            <input id="libre" type="radio" name="situation" value="libre">En relation libre<br>
+            <label for="libre"></label>
+        </p>
+
+        <input type="submit" value="Suivant">
+    </form>
 
 </section>
 <footer class="footer">
@@ -104,5 +137,8 @@
     </div>
 
 </footer>
+
+
+
 </body>
 </html>

@@ -63,12 +63,12 @@
                 <span></span>
                 <span></span>
                 <div id="menu">
-                    <a href="index.html">Home</a>
-                    <a href="labague.html">La Bague</a>
-                    <a href="solo.html">Les Modes</a>
-                    <a href="propos-nous.html">À propos</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="index.php">Home</a>
+                    <a href="labague.php">La Bague</a>
+                    <a href="solo.php">Les Modes</a>
+                    <a href="propos-nous.php">À propos</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="mentions-legales.php">Mentions Légales</a>
                 </div>
             </div>
         </nav>
@@ -81,40 +81,55 @@
     <div class="etapes row">
         <p href="q1.html" class="question q-1 prev">1</p>
         <div class="trait-q"></div>
-        <p href="q2.html" class="question q-2 active">2</p>
+        <p href="q2.html" class="question q-2 prev">2</p>
         <div class="trait-q"></div>
-        <p href="q3.html" class="question q-3">3</p>
+        <p href="q3.html" class="question q-3 prev">3</p>
         <div class="trait-q"></div>
-        <p href="q4.html" class="question q-4">4</p>
+        <p href="q4.html" class="question q-4 prev">4</p>
         <div class="trait-q"></div>
-        <p href="q5.html" class="question q-5">5</p>
+        <p href="q5.html" class="question q-5 prev">5</p>
         <div class="trait-q"></div>
-        <p href="qresult.html" class="question result">Résultat</p>
+        <p href="qresult.html" class="question result active">Résultat</p>
     </div>
 
 
     <div class="trait"></div>
-    <h2>Vous êtes ?</h2>
+    <h2>Votre rock’attitude</h2>
 
+    <article class="col-6" style="float: left">
 
-    <form action="">
-        <p class="align-input">
-            <input id="celibataire" type="radio" name="situation" value="celibataire">Célibataire<br>
-            <label for="celibataire"></label>
+        <div class="bar-progress">
+            <progress class="avancement" value="50" max="100"></progress>
+            <span class="theme">Rock’Attitude</span>
+        </div>
+        <div class="bar-progress">
+            <progress class="avancement" value="50" max="100"></progress>
+            <span class="theme">Puissance sonore</span>
+        </div>
+        <div class="bar-progress">
+            <progress class="avancement" value="90" max="100"></progress>
+            <span class="theme">BPM</span>
+        </div>
+        <div class="bar-progress">
+            <progress class="avancement" value="50" max="100"></progress>
+            <span class="theme">Sexualité</span>
+        </div>
+
+    </article>
+    <article class="col-6 rockattitude" style="float: right">
+        <h4>Vous ressemblez à Neil Young</h4>
+        <p>Vous ne pouvez trouver l'épanouissement des sens que dans l'harmonie et l'équilibre. Toute contrainte, toute brusquerie, toute dissonance et tout désordre sont aptes à refroidir vos ardeurs et à vous ôter l'envie de la moindre expérience. Vous êtes dotés d'un bon tempérament sexuel, ni trop faible, ni excessif. Là encore, le maître mot, pour qualifier son comportement, est "équilibre" - équilibre entre sexe et sentiments, entre animalité et raffinement, entre pulsions et jeux amoureux. Les ambiances comptent beaucoup pour vous: le décor, la qualité des lumières, des couleurs, des odeurs...
         </p>
 
-        <p class="align-input">
-            <input id="couple" type="radio" name="situation" value="couple">En couple<br>
-            <label for="couple"></label>
-        </p>
+    </article>
 
-        <p class="align-input">
-            <input id="libre" type="radio" name="situation" value="libre">En relation libre<br>
-            <label for="libre"></label>
-        </p>
+    <div class="clear"></div>
 
-        <input type="submit" value="Suivant">
-    </form>
+    <div class="col-10 container">
+        <p>Le mode <span>Duo</span> est donc fait pour vous ! </p>
+        <a href="duo.php">Tester</a>
+    </div>
+
 
 </section>
 <footer class="footer">

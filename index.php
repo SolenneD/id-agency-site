@@ -62,12 +62,12 @@
                     <span></span>
                     <span></span>
                     <div id="menu">
-                        <a href="index.html">Home</a>
-                        <a href="labague.html">La Bague</a>
-                        <a href="solo.html">Les Modes</a>
-                        <a href="propos-nous.html">À propos</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="mentions-legales.html">Mentions Légales</a>
+                        <a href="index.php">Home</a>
+                        <a href="labague.php">La Bague</a>
+                        <a href="solo.php">Les Modes</a>
+                        <a href="propos-nous.php">À propos</a>
+                        <a href="contact.php">Contact</a>
+                        <a href="mentions-legales.php">Mentions Légales</a>
                     </div>
                 </div>
             </nav>
@@ -77,7 +77,7 @@
     <section id="accueil">
         <div class="title-home">
             <p class="title-accueil">Découvrez votre niveau de Rock’Attitude !</p>
-            <a href="qintro.html" class="btn btn-question">Commencer le test</a>
+            <a href="qintro.php" class="btn btn-question">Commencer le test</a>
         </div>
 
         <div class="courbe">
@@ -100,7 +100,7 @@
                 <div class="trait"></div>
                 <h2>Notre Concept</h2>
                 <p>Pace Me synchronise la musique à votre rythme cardiaque pendant l’acte sexuel. Laissez notre application gérer la musique.</p>
-                <a href="solo.html" class="btn">Vers les modes</a>
+                <a href="solo.php" class="btn">Vers les modes</a>
                 <div class="concept-compatible">
                     <p>* Compatible avec : Applewatch, Fitbit, Samsung watch, Huawei watch.</p>
                     <p>* Se connecter avec son compte Deezer et Spotify</p>

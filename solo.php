@@ -62,12 +62,12 @@
                 <span></span>
                 <span></span>
                 <div id="menu">
-                    <a href="index.html">Home</a>
-                    <a href="labague.html">La Bague</a>
-                    <a href="solo.html">Les Modes</a>
-                    <a href="propos-nous.html">À propos</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="mentions-legales.html">Mentions Légales</a>
+                    <a href="index.php">Home</a>
+                    <a href="labague.php">La Bague</a>
+                    <a href="solo.php">Les Modes</a>
+                    <a href="propos-nous.php">À propos</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="mentions-legales.php">Mentions Légales</a>
                 </div>
             </div>
         </nav>
@@ -78,43 +78,43 @@
         <div class="trait"></div>
         <h2>Les Modes</h2>
 
-        <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
-            <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Solo</p>
-                <p class="champ-mode-blanc petit-blanc">Trouvez votre plaisir dans la musique...</p>
-            </div>
-            <a href="solo.html" class="test-mode">Tester</a>
-        </article>
         <article class="champ-mode-petit active-champ">
             <div class="rond-mode"></div>
             <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Duo</p>
-                <p class="champ-mode-blanc petit-blanc">Laissez vos corps guider la musique...</p>
+            <p class="champ-mode-blanc moyen-blanc">Solo</p>
+            <p class="champ-mode-blanc petit-blanc">Trouvez votre plaisir dans la musique...</p>
             </div>
-            <a href="duo.html" class="test-mode">Tester</a>
+            <a href="solo.php" class="test-mode">Tester</a>
         </article>
         <article class="champ-mode-petit">
             <div class="rond-mode"></div>
             <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Versus</p>
-                <p class="champ-mode-blanc petit-blanc">Qui auras le plus de plaisir musical ?!</p>
+            <p class="champ-mode-blanc moyen-blanc">Duo</p>
+            <p class="champ-mode-blanc petit-blanc">Laissez vos corps guider la musique...</p>
+            </div>
+            <a href="duo.php" class="test-mode">Tester</a>
+        </article>
+        <article class="champ-mode-petit">
+            <div class="rond-mode"></div>
+            <div class="droit-mode">
+            <p class="champ-mode-blanc moyen-blanc">Versus</p>
+            <p class="champ-mode-blanc petit-blanc">Qui auras le plus de plaisir musical ?!</p>
             </div>
             <a href="versus.html" class="test-mode">Tester</a>
         </article>
         <article class="champ-mode-petit">
             <div class="rond-mode"></div>
             <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Nirvana</p>
-                <p class="champ-mode-blanc petit-blanc">Vibrez à chaque note...</p>
+            <p class="champ-mode-blanc moyen-blanc">Nirvana</p>
+            <p class="champ-mode-blanc petit-blanc">Vibrez à chaque note...</p>
             </div>
             <a href="nirvana.html" class="test-mode">Tester</a>
         </article>
         <article class="champ-mode-petit">
             <div class="rond-mode"></div>
             <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Band</p>
-                <p class="champ-mode-blanc petit-blanc">Devenez l’instrument de vos plaisir...</p>
+            <p class="champ-mode-blanc moyen-blanc">Band</p>
+            <p class="champ-mode-blanc petit-blanc">Devenez l’instrument de vos plaisir...</p>
             </div>
             <a href="band.html" class="test-mode">Tester</a>
         </article>
@@ -122,10 +122,6 @@
     </article>
     <article class="col-6">
         <p>Cliquez au rythme de votre coeur et la musique s’adapte à vous !</p>
-
-        <div class="coeur">
-            <a class="button heart"></a>
-        </div>
 
         <div class="coeur">
             <a class="button heart"></a>

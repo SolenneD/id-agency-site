@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Pace Me - La bague</title>
+    <title>Paceme - Contact</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -55,40 +55,65 @@
         </a>
     </h1>
     <div class="menu">
-        <nav role="navigation" id="burger">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <div id="menu">
-                    <a href="index.html">Home</a>
-                    <a href="labague.html">La Bague</a>
-                    <a href="solo.html">Les Modes</a>
-                    <a href="propos-nous.html">À propos</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="mentions-legales.html">Mentions Légales</a>
+            <nav role="navigation" id="burger">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div id="menu">
+                        <a href="index.php">Home</a>
+                        <a href="labague.php">La Bague</a>
+                        <a href="solo.php">Les Modes</a>
+                        <a href="propos-nous.php">À propos</a>
+                        <a href="contact.php">Contact</a>
+                        <a href="mentions-legales.php">Mentions Légales</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+</header>
+
+<section id="page-contact" class="container col-10">
+    <section id="contact">
+        <div class="trait"></div>
+        <h2>Nous Contacter</h2>
+        <p>Vous avez besoins de plus d’informations <br> ou bien vous désirez des réponses à vos questions ? <br>N’hésitez pas à nous contacter, nous sommes ici pour vous aider !</p>
+
+        <form class="">
+            <input required type="text" name="name" id="name" placeholder="Nom">
+            <input required type="email" name="mail" id="email" placeholder="Adresse email">
+            <textarea required name="message" placeholder="Message" id="message" tabindex="4" cols="30" rows="8"></textarea>
+
+            <div style="display: inline-flex;">
+                <div class="align-input">
+                    <input type="checkbox">
+                    <label>S’inscrire à la newsletter</label>
+                </div>
+                <div class="align-input">
+                    <a href="">
+                        <div class="download"></div>
+                        <p id="p-download">Télécharger le kit presse</p>
+                    </a>
                 </div>
             </div>
-        </nav>
-    </div>
-</header>
-<section id="page-404" class="container col-10">
-    <div style="margin-bottom: 30px">
-        <span id="chiffre-1" class="erreur-404">4</span>
-        <div class="image-erreur"></div>
-        <span id="chiffre-2" class="erreur-404">4</span>
-    </div>
-    <p>Psst... Il semblerait que vous n’êtes pas là où vous devriez être... </p>
 
-    <a href="index.html" class="btn">Retour à l'accueil</a>
+
+            <input class="btn-valid" type="submit" name="envoi" value="Envoyer">
+
+
+        </form>
+
+    </section>
 </section>
+
+
 
 <footer>
 
+
     <div class="img-footer">
-
-
         <div class="rs-desktop">
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
@@ -97,5 +122,6 @@
     </div>
 
 </footer>
+
 </body>
 </html>
