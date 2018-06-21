@@ -117,7 +117,7 @@
 
     </article>
     <article class="col-6 rockattitude" style="float: right">
-        <h4>Vous ressemblez à Neil Young</h4>
+        <h4>Vous ressemblez à <span>Neil Young</span></h4>
         <p>Vous ne pouvez trouver l'épanouissement des sens que dans l'harmonie et l'équilibre. Toute contrainte, toute brusquerie, toute dissonance et tout désordre sont aptes à refroidir vos ardeurs et à vous ôter l'envie de la moindre expérience. Vous êtes dotés d'un bon tempérament sexuel, ni trop faible, ni excessif. Là encore, le maître mot, pour qualifier son comportement, est "équilibre" - équilibre entre sexe et sentiments, entre animalité et raffinement, entre pulsions et jeux amoureux. Les ambiances comptent beaucoup pour vous: le décor, la qualité des lumières, des couleurs, des odeurs...
         </p>
 
@@ -148,6 +148,14 @@
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
 
