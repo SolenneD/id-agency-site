@@ -1,72 +1,4 @@
-<?php
-
-include"config/settings.php"; 
-
-$resultat = 0;
-$sexe = 0;
-
-if($_POST['q1'] == "femme"){
-    $sexe = $sexe + 1;
-}
-
-
-if($_POST['q2'] == "couple"){
-    $resultat = $resultat + 1;
-}
-if($_POST['q2'] == "libre"){
-    $resultat = $resultat + 3;
-}
-
-
-if($_POST['q3'] == "extraverti"){
-    $resultat = $resultat + 1;
-}
-if($_POST['q3'] == "malicieux"){
-    $resultat = $resultat + 3;
-}
-
-
-if($_POST['q4'] == "conquetes"){
-    $resultat = $resultat + 1;
-}
-if($_POST['q4'] == "libertins"){
-    $resultat = $resultat + 3;
-}
-
-
-if($resultat == 0){
-    $rockeur = "Beatles";
-    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE score = :i');
-    $horoscope->bindParam(':i', 0, PDO::PARAM_STR);
-    $horoscope->execute();
-    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
-}
-if(0 < $resultat < 6 ){
-    $rockeur = "Lennon";
-    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score < :i');
-    $horoscope->bindParam(':z', 0, PDO::PARAM_STR);
-    $horoscope->bindParam(':i', 6, PDO::PARAM_STR);
-    $horoscope->execute();
-    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
-}
-if(5 < $resultat < 7){
-    $rockeur = "Halliday";
-    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score < :i');
-    $horoscope->bindParam(':z', 5, PDO::PARAM_STR);
-    $horoscope->bindParam(':i', 7, PDO::PARAM_STR);
-    $horoscope->execute();
-    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
-}
-if($resultat > 8){
-    $rockeur = "Beatles";
-    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE score > :i');
-    $horoscope->bindParam(':i', 8, PDO::PARAM_STR);
-    $horoscope->execute();
-    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
-}
-
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -124,55 +56,49 @@ if($resultat > 8){
     <div class="etapes row">
         <p href="q1.html" class="question q-1 prev">1</p>
         <div class="trait-q"></div>
-        <p href="q2.html" class="question q-2 prev">2</p>
+        <p href="q2.html" class="question q-2 active">2</p>
         <div class="trait-q"></div>
-        <p href="q3.html" class="question q-3 prev">3</p>
+        <p href="q3.html" class="question q-3">3</p>
         <div class="trait-q"></div>
-        <p href="q4.html" class="question q-4 prev">4</p>
+        <p href="q4.html" class="question q-4">4</p>
         <div class="trait-q"></div>
-        <p href="q5.html" class="question q-5 prev">5</p>
+        <p href="q5.html" class="question q-5">5</p>
         <div class="trait-q"></div>
-        <p href="qresult.html" class="question result active">Résultat</p>
+        <p href="qresult.html" class="question result">Résultat</p>
     </div>
 
 
     <div class="trait"></div>
-    <h2>Votre rock’attitude</h2>
+    <h2>Vous êtes ?</h2>
 
-    <article class="col-6" style="float: left">
 
-        <div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progressrock'] ?>" max="100"></progress>
-            <span class="theme">Rock’Attitude</span>
-        </div>
-        <div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progresssonore'] ?>" max="100"></progress>
-            <span class="theme">Puissance sonore</span>
-        </div>
-        <div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progressbpm'] ?>" max="100"></progress>
-            <span class="theme">BPM</span>
-        </div>
-        <div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progresssexualite'] ?>" max="100"></progress>
-            <span class="theme">Sexualité</span>
-        </div>
-
-    </article>
-    <article class="col-6 rockattitude" style="float: right">
-        <h4>Vous ressemblez à <?= $data['rockeur'] ?></h4>
-        <p><?= $data['texte'] ?>
+    <form action="qresult.php" method="post">
+        <input hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
+        <input hidden type="text" name="q2" value="<?php echo $_POST['q2'] ?>">
+        <input hidden type="text" name="q3" value="<?php echo $_POST['q3'] ?>">
+        <input hidden type="text" name="q4" value="<?php echo $_POST['q4'] ?>">
+        <p class="align-input">
+            <input id="poprock" type="radio" name="q5" value="poprock">Pop Rock<br>
+            <label for="poprock"></label>
         </p>
 
-    </article>
+        <p class="align-input">
+            <input id="hardrock" type="radio" name="q5" value="hardrock">Hard Rock<br>
+            <label for="hardrock"></label>
+        </p>
 
-    <div class="clear"></div>
+        <p class="align-input">
+            <input id="metal" type="radio" name="q5" value="metal">Métal<br>
+            <label for="metal"></label>
+        </p>
 
-    <div class="col-10 container">
-        <p>Le mode <span><?= $data['mode'] ?></span> est donc fait pour vous ! </p>
-        <a href="<?= $data['lien'] ?>">Tester</a>
-    </div>
+        <p class="align-input">
+            <input id="punk" type="radio" name="q5" value="punk">Punk<br>
+            <label for="punk"></label>
+        </p>
 
+        <input type="submit" value="Suivant">
+    </form>
 
 </section>
 <footer class="footer">
