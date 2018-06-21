@@ -1162,6 +1162,31 @@ progress::-webkit-progress-value {
 		display: none;
 	}
 
+	/*home*/
+	.parallax{
+		height: 50px;
+	}
+	#notre-bague>article>.right, #notre-concept>article>.right{
+		float: none;
+	}
+	#notre-concept>article{
+		margin-bottom: 25px;
+	}
+	.rond-myapp{
+		width: 255px;
+		height: 255px;
+		background-size: contain;
+		float: none;
+		position: relative;
+		left: -50px;
+	}
+	.rond-bague{
+		width: 250px;
+		height: 250px;
+		position: relative;
+		left: 150px;
+	}
+
 	/*page à propos*/
 	#page-apropos .col-6.row{
 		display: flex;
@@ -1242,6 +1267,9 @@ progress::-webkit-progress-value {
 	}
 	#contact{
 		margin-bottom: 70px;
+	}
+	#p-download, .download{
+		display: none;
 	}
 
 

@@ -149,7 +149,7 @@ EOT;
             <label for="email"></label>
             <input required type="email" name="email" id="email" placeholder="Adresse email">
             <label for="message"></label>
-            <textarea required name="message" placeholder="Message" id="message" tabindex="4" cols="30" rows="8"></textarea>
+            <textarea required name="message" placeholder="Message" id="message"></textarea>
 
             <div id="btn-checkbox">
                 <div class="align-input">
