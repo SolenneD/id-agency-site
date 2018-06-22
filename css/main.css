@@ -62,6 +62,9 @@ body{
 .clear{
 	clear: both;
 }
+.cache{
+	display: none;
+}
 .header{
 	height: 150px;
 }
@@ -620,7 +623,7 @@ form .align-input>a{
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: #cccccc;
+	background-color: #9B9B9B;
 	vertical-align: middle;
 	float: left;
 	margin-top: 15px;
@@ -629,21 +632,41 @@ form .align-input>a{
 }
 .champ-mode-petit{
 	border-radius: 10px;
-	background-color: #000000;
-	background-image: url(../src/labague/vague-labague.svg);
-	background-position: bottom right;
 	background-position-y: 30%;
-	background-repeat: no-repeat;
-	width: 360px;
+	background: #000000 url(../src/labague/vague-labague.svg) no-repeat bottom right;
+	background-size: cover;
+	width: 300px;
 	height: 80px;
 	margin-bottom: 20px;
 }
+
 .champ-mode-petit.active-champ{
-	width: 460px;
-	height: 80px;
-	margin-bottom: 20px;
 	box-shadow: 1px 1px 5px 2px #cccccc;
+	background: #ffffff url(../src/labague/) no-repeat bottom right;
 }
+.champ-mode-petit.active-champ a.test-mode{
+	display: none;
+}
+.champ-mode-petit.active-champ p{
+	color: #000000;
+}
+.champ-mode-petit.active-champ #solo{
+	background-size: contain;
+	background: #9B9B9B url("../src/modes/solo-blanc.png") no-repeat center;
+}
+.champ-mode-petit.active-champ #duo{
+	background-size: contain;
+	background: #9B9B9B url("../src/modes/duo-blanc.png") no-repeat center;
+}
+.champ-mode-petit.active-champ #versus{
+	background-size: contain;
+	background: #9B9B9B url("../src/modes/versus-blanc.png") no-repeat center;
+}
+.champ-mode-petit.active-champ #band{
+	background-size: contain;
+	background: #9B9B9B url("../src/modes/band-blanc.png") no-repeat center;
+}
+
 .champ-mode-blanc.moyen-blanc{
 	font-size: 14px;
 	text-align: left;
@@ -658,18 +681,39 @@ form .align-input>a{
 	padding-top: 0;
 	width: auto;
 }
+
+#solo{
+	background: #9B9B9B url("../src/modes/solo-noir.png") no-repeat center;
+	background-size: auto;
+}
+#duo{
+	background: #9B9B9B url("../src/modes/duo-noir.png") no-repeat center;
+	background-size: auto;
+
+}
+#versus{
+	background: #9B9B9B url("../src/modes/versus-noir.png") no-repeat center;
+	background-size: auto;
+
+}
+#band{
+	background: #9B9B9B url("../src/modes/band-noir.png") no-repeat center;
+	background-size: auto;
+
+}
+
 .droit-mode{
 	float: left;
-	width: 50%;
+	width: 45%;
 }
 a.test-mode{
 	text-decoration: none;
 	float: right;
-	padding: 10px 15px;
+	padding: 6px 10px;
 	background-color: transparent;
 	border-radius: 100px;
 	border: 1px solid #ffffff;
-	margin: 25px 15px;
+	margin: 25px 10px;
 	display: inline;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -1203,7 +1247,7 @@ progress::-webkit-progress-value {
 	.decoration-rond-3 + div{
 		display: flex;
 		flex-wrap: wrap;
-		width: 90%;
+		width: 95%;
 		margin: auto;
 	}
 

@@ -97,19 +97,20 @@
     <h2>Vous êtes ?</h2>
 
 
-    <form action="">
+    <form action="q3.php" method="post">
+        <input class="cache" hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
         <p class="align-input">
-            <input id="celibataire" type="radio" name="situation" value="celibataire">Célibataire<br>
+            <input id="celibataire" type="radio" name="q2" value="celibataire">Célibataire<br>
             <label for="celibataire"></label>
         </p>
 
         <p class="align-input">
-            <input id="couple" type="radio" name="situation" value="couple">En couple<br>
+            <input id="couple" type="radio" name="q2" value="couple">En couple<br>
             <label for="couple"></label>
         </p>
 
         <p class="align-input">
-            <input id="libre" type="radio" name="situation" value="libre">En relation libre<br>
+            <input id="libre" type="radio" name="q2" value="libre">En relation libre<br>
             <label for="libre"></label>
         </p>
 

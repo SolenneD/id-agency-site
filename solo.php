@@ -44,6 +44,41 @@
         })();
 
     </script>
+    <script>
+        $(function(){
+            var clic = 0;
+            var bpm;
+            var audiofile;
+
+            $("#tap").click(function(){
+                clic =clic + 1;
+            });
+
+            window.setInterval(function()
+            {
+                $.ajax({
+                    type: "post",
+                    url: "core/calcul_bpm.php",
+                    data: {clic: clic}
+                }).done(function (msg) {
+                    {
+                        try{
+                            audiofile.pause();
+                        }catch(e){
+
+                        }
+                        audiofile = new Audio(msg);
+                        audiofile.play();
+                        console.log("prout");
+
+                        // $('embed').attr('src', msg);
+                        // clic = 0;
+                    }
+                });
+            }, 5000); //10000 milliseconds = 10 seconds
+        });
+
+    </script>
 </head>
 <body>
 <header class="header">
@@ -79,54 +114,56 @@
         <h2>Les Modes</h2>
 
         <article class="champ-mode-petit active-champ">
-            <div class="rond-mode"></div>
+            <div id="solo" class="rond-mode"></div>
             <div class="droit-mode">
             <p class="champ-mode-blanc moyen-blanc">Solo</p>
             <p class="champ-mode-blanc petit-blanc">Trouvez votre plaisir dans la musique...</p>
             </div>
             <a href="solo.php" class="test-mode">Tester</a>
         </article>
+
         <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
+            <div id="duo" class="rond-mode"></div>
             <div class="droit-mode">
             <p class="champ-mode-blanc moyen-blanc">Duo</p>
             <p class="champ-mode-blanc petit-blanc">Laissez vos corps guider la musique...</p>
             </div>
             <a href="duo.php" class="test-mode">Tester</a>
         </article>
+
         <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
+            <div id="versus" class="rond-mode"></div>
             <div class="droit-mode">
             <p class="champ-mode-blanc moyen-blanc">Versus</p>
             <p class="champ-mode-blanc petit-blanc">Qui auras le plus de plaisir musical ?!</p>
             </div>
-            <a href="versus.html" class="test-mode">Tester</a>
+            <a href="#" class="test-mode">À venir</a>
         </article>
+
         <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
-            <div class="droit-mode">
-            <p class="champ-mode-blanc moyen-blanc">Nirvana</p>
-            <p class="champ-mode-blanc petit-blanc">Vibrez à chaque note...</p>
-            </div>
-            <a href="nirvana.html" class="test-mode">Tester</a>
-        </article>
-        <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
+            <div id="band" class="rond-mode"></div>
             <div class="droit-mode">
             <p class="champ-mode-blanc moyen-blanc">Band</p>
             <p class="champ-mode-blanc petit-blanc">Devenez l’instrument de vos plaisir...</p>
             </div>
-            <a href="band.html" class="test-mode">Tester</a>
+            <a href="#" class="test-mode">À venir</a>
         </article>
 
     </article>
     <article class="col-6">
         <p>Cliquez au rythme de votre coeur et la musique s’adapte à vous !</p>
 
-        <div class="coeur">
+        <div id="tap" class="coeur">
             <a class="button heart"></a>
             <div id="ici" class=""></div>
         </div>
+
+        <embed src="" autoplay="1" loop="1" >
+<!--        <audio-->
+<!--                controls-->
+<!--                src="">-->
+<!--        </audio>-->
+
 
 
     </article>

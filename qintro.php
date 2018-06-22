@@ -81,7 +81,7 @@
 
     <p class="center-text">Découvrez quelle fonctionnalité est faite pour vous ! </p>
 
-    <a href="q1.html" class="btn-question">Commencer le test</a>
+    <a href="q1.php" class="btn-question">Commencer le test</a>
 
 </section>
 <footer class="footer">
