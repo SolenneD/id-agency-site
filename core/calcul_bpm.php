@@ -5,6 +5,7 @@ $bpm = $_POST['clic']*6;
 
 $resultats = array();
 
+$c_0 = 0;
 $c_91 = 91;
 $c_90 = 90;
 $c_101 = 101;
@@ -25,8 +26,9 @@ $c_171 = 171;
 $c_170 = 170;
 
 
-if($bpm < 91 ){
-    $horoscope = $db->prepare('SELECT * FROM deezer WHERE bpm < :i');
+if(0 < $bpm AND $bpm < 91 ){
+    $horoscope = $db->prepare('SELECT * FROM deezer WHERE :a < bpm AND bpm < :i');
+    $horoscope->bindParam(':a', $c_0, PDO::PARAM_STR);
     $horoscope->bindParam(':i', $c_90, PDO::PARAM_STR);
     $horoscope->execute();
     while($data = $horoscope->fetch(PDO::FETCH_ASSOC)){

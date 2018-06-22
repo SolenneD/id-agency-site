@@ -128,7 +128,7 @@
             <p class="champ-mode-blanc moyen-blanc">Duo</p>
             <p class="champ-mode-blanc petit-blanc">Laissez vos corps guider la musique...</p>
             </div>
-            <a href="duo.php" class="test-mode">Tester</a>
+            <a href="duo.php" class="test-mode mode-a-venir">À venir</a>
         </article>
 
         <article class="champ-mode-petit">
@@ -137,7 +137,7 @@
             <p class="champ-mode-blanc moyen-blanc">Versus</p>
             <p class="champ-mode-blanc petit-blanc">Qui auras le plus de plaisir musical ?!</p>
             </div>
-            <a href="#" class="test-mode">À venir</a>
+            <a href="#" class="test-mode mode-a-venir">À venir</a>
         </article>
 
         <article class="champ-mode-petit">
@@ -146,7 +146,7 @@
             <p class="champ-mode-blanc moyen-blanc">Band</p>
             <p class="champ-mode-blanc petit-blanc">Devenez l’instrument de vos plaisir...</p>
             </div>
-            <a href="#" class="test-mode">À venir</a>
+            <a href="#" class="test-mode mode-a-venir">À venir</a>
         </article>
 
     </article>
@@ -155,7 +155,7 @@
 
         <div id="tap" class="coeur">
             <a class="button heart"></a>
-            <div id="ici" class=""></div>
+
         </div>
 
         <embed src="" autoplay="1" loop="1" >
@@ -199,8 +199,14 @@
 </footer>
 
 <script>
-    $("a.button").click(function(){
-        $("#ici").addClass("circle ping");
+    $("#tap").click(function(e){
+        $(this).append($("<div class='circle ping'>"));
+        
+        window.setTimeout(function(){
+            $("div.circle:first-of-type").remove();
+        }, 1000)
+
+        //$("#ici").toggleClass("ping");
     });
 </script>
 

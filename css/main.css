@@ -647,6 +647,9 @@ form .align-input>a{
 .champ-mode-petit.active-champ a.test-mode{
 	display: none;
 }
+a.mode-a-venir{
+	cursor: default;
+}
 .champ-mode-petit.active-champ p{
 	color: #000000;
 }
@@ -723,10 +726,10 @@ a.test-mode{
 	background-color: #ffffff;
 	color: #000000;
 }
-a.test-mode:hover{
-	background-color: #ffffff;
-	color: #000000;
-}
+/*a.test-mode:hover{*/
+	/*background-color: #ffffff;*/
+	/*color: #000000;*/
+/*}*/
 
 /*bouton coeur*/
 .coeur{
@@ -796,8 +799,10 @@ a.test-mode:hover{
 	height: 200px;
 	border: 2px solid #666666;
 	border-radius: 50%;
-	position: relative;
-	z-index: 1;
+	position: absolute;
+	left: -65px;
+	top: -65px;
+	z-index: -1;
 }
 .ping{
 	-webkit-animation: ping .8s ease-in-out both;
