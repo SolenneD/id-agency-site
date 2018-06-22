@@ -63,7 +63,7 @@
                     <span></span>
                     <div id="menu">
                         <a href="index.php">Home</a>
-                        <a href="labague.php">La Bague</a>
+<!--                        <a href="labague.php">La Bague</a>-->
                         <a href="solo.php">Les Modes</a>
                         <a href="propos-nous.php">À propos</a>
                         <a href="contact.php">Contact</a>
@@ -116,7 +116,7 @@
                 <div class="trait"></div>
                 <h2>La Bague</h2>
                 <p>Cette bague connectée récupère vos pulsations cardiaque afin que la musique se synchronise à votre rythme.</p>
-                <a style="position: relative;z-index: 2;" href="#" class="btn">Découvrez la bague</a>
+<!--                <a style="position: relative;z-index: 2;" href="labague.php" class="btn">Découvrez la bague</a>-->
             </div>
         </article>
         <article class="col-6">

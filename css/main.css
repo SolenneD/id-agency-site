@@ -656,6 +656,7 @@ a.mode-a-venir{
 .champ-mode-petit.active-champ #solo{
 	background-size: contain;
 	background: #9B9B9B url("../src/modes/solo-blanc.png") no-repeat center;
+	background-image: url("../src/modes/solo-blanc.png"),  linear-gradient(220.95deg, #FFFFFF 13.82%, #9B9B9B 87.76%);
 }
 .champ-mode-petit.active-champ #duo{
 	background-size: contain;

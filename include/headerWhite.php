@@ -15,7 +15,7 @@
                 <span></span>
                 <div id="menu">
                     <a href="index.php">Home</a>
-                    <a href="labague.php">La Bague</a>
+<!--                    <a href="labague.php">La Bague</a>-->
                     <a href="solo.php">Les Modes</a>
                     <a href="propos-nous.php">À propos</a>
                     <a href="contact.php">Contact</a>
