@@ -1,4 +1,77 @@
-<!DOCTYPE html>
+<?php
+
+include"config/settings.php";
+
+$resultat = 0;
+$sexe = 0;
+
+if($_POST['q1'] == "femme"){
+    $sexe = $sexe + 1;
+}
+
+
+if($_POST['q2'] == "couple"){
+    $resultat = $resultat + 1;
+}
+if($_POST['q2'] == "libre"){
+    $resultat = $resultat + 3;
+}
+
+
+if($_POST['q3'] == "extraverti"){
+    $resultat = $resultat + 1;
+}
+if($_POST['q3'] == "malicieux"){
+    $resultat = $resultat + 3;
+}
+
+
+if($_POST['q4'] == "conquetes"){
+    $resultat = $resultat + 1;
+}
+if($_POST['q4'] == "libertins"){
+    $resultat = $resultat + 3;
+}
+
+$zero = 0;
+$six = 6;
+$cinq = 5;
+$sept = 7;
+$huit = 8;
+
+if($resultat == 0){
+    $rockeur = "Beatles";
+    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE score = :i');
+    $horoscope->bindParam(':i', $zero, PDO::PARAM_STR);
+    $horoscope->execute();
+    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
+}
+if(0 < $resultat && $resultat < 6 ){
+    $rockeur = "Lennon";
+    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score AND score < :i');
+    $horoscope->bindParam(':z', $zero, PDO::PARAM_STR);
+    $horoscope->bindParam(':i', $six, PDO::PARAM_STR);
+    $horoscope->execute();
+    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
+}
+if(5 < $resultat && $resultat < 7){
+    $rockeur = "Halliday";
+    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score AND score < :i');
+    $horoscope->bindParam(':z', $cinq, PDO::PARAM_STR);
+    $horoscope->bindParam(':i', $sept, PDO::PARAM_STR);
+    $horoscope->execute();
+    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
+}
+if($resultat > 8){
+    $rockeur = "Beatles";
+    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE score > :i');
+    $horoscope->bindParam(':i', $huit, PDO::PARAM_STR);
+    $horoscope->execute();
+    $data = $horoscope->fetch(PDO::FETCH_ASSOC);
+}
+
+
+?><!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -47,33 +120,7 @@
 </head>
 <body id="background-questionnaire">
 
-<header class="header">
-    <h1 class="logo">
-        <a href="http://www.paceme.fr/">
-            <img src="src/logo-blanc/logo-desktop-blanc.png" alt="logo-paceme" class="desktop">
-            <img src="src/logo-blanc/logo-tablette-blanc.png" alt="logo-paceme" class="tablette">
-            <img src="src/logo-blanc/logo-mobile-blanc.png" alt="logo-paceme" class="mobile">
-        </a>
-    </h1>
-    <div class="menu blanc">
-        <nav role="navigation" id="burger">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <div id="menu">
-                    <a href="index.php">Home</a>
-                    <a href="labague.php">La Bague</a>
-                    <a href="solo.php">Les Modes</a>
-                    <a href="propos-nous.php">À propos</a>
-                    <a href="contact.php">Contact</a>
-                    <a href="mentions-legales.php">Mentions Légales</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
+<?php include("include/headerBlack.php") ?>
 
 <section id="q2" class="container col-10">
 
@@ -99,35 +146,34 @@
     <article class="col-6" style="float: left">
 
         <div class="bar-progress">
-            <progress class="avancement" value="50" max="100"></progress>
+            <progress class="avancement" value="<?= $data['progressrock'] ?>" max="100"></progress>
             <span class="theme">Rock’Attitude</span>
         </div>
         <div class="bar-progress">
-            <progress class="avancement" value="50" max="100"></progress>
+            <progress class="avancement" value="<?= $data['progresssonore'] ?>" max="100"></progress>
             <span class="theme">Puissance sonore</span>
         </div>
         <div class="bar-progress">
-            <progress class="avancement" value="90" max="100"></progress>
+            <progress class="avancement" value="<?= $data['progressbpm'] ?>" max="100"></progress>
             <span class="theme">BPM</span>
         </div>
         <div class="bar-progress">
-            <progress class="avancement" value="50" max="100"></progress>
+            <progress class="avancement" value="<?= $data['progresssexualite'] ?>" max="100"></progress>
             <span class="theme">Sexualité</span>
         </div>
 
     </article>
     <article class="col-6 rockattitude" style="float: right">
-        <h4>Vous ressemblez à Neil Young</h4>
-        <p>Vous ne pouvez trouver l'épanouissement des sens que dans l'harmonie et l'équilibre. Toute contrainte, toute brusquerie, toute dissonance et tout désordre sont aptes à refroidir vos ardeurs et à vous ôter l'envie de la moindre expérience. Vous êtes dotés d'un bon tempérament sexuel, ni trop faible, ni excessif. Là encore, le maître mot, pour qualifier son comportement, est "équilibre" - équilibre entre sexe et sentiments, entre animalité et raffinement, entre pulsions et jeux amoureux. Les ambiances comptent beaucoup pour vous: le décor, la qualité des lumières, des couleurs, des odeurs...
-        </p>
+        <h4>Vous ressemblez à <span><?= $data['rockeur'] ?></span></h4>
+        <p><?= $data['texte'] ?></p>
 
     </article>
 
     <div class="clear"></div>
 
     <div class="col-10 container">
-        <p>Le mode <span>Duo</span> est donc fait pour vous ! </p>
-        <a href="duo.php">Tester</a>
+        <p>Le mode <span><?= $data['mode'] ?></span> est donc fait pour vous ! </p>
+        <a href="<?= $data['lien'] ?>">Tester</a>
     </div>
 
 
@@ -148,6 +194,14 @@
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
 

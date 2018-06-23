@@ -46,38 +46,17 @@
     </script>
 </head>
 <body>
-<header class="header">
-    <h1 class="logo">
-        <a href="http://www.paceme.fr/">
-            <img src="src/logo-noir/logo-desktop-noir.png" alt="logo-paceme" class="desktop">
-            <img src="src/logo-noir/logo-tablette-noir.png" alt="logo-paceme" class="tablette">
-            <img src="src/logo-noir/logo-mobile-noir.png" alt="logo-paceme" class="mobile">
-        </a>
-    </h1>
-    <div class="menu">
-        <nav role="navigation" id="burger">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <div id="menu">
-                    <a href="index.php">Home</a>
-                    <a href="labague.php">La Bague</a>
-                    <a href="solo.php">Les Modes</a>
-                    <a href="propos-nous.php">À propos</a>
-                    <a href="contact.php">Contact</a>
-                    <a href="mentions-legales.php">Mentions Légales</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
+
+<?php include("include/headerWhite.php") ?>
+
 <section id="page-404" class="container col-10">
-    <div style="margin-bottom: 30px">
-        <span id="chiffre-1" class="erreur-404">4</span>
+    <div class="row" style="margin-bottom: 50px">
+        <div class="col-6"><span id="chiffre-1" class="erreur-404">4</span></div>
+
         <div class="image-erreur"></div>
-        <span id="chiffre-2" class="erreur-404">4</span>
+
+        <div class="col-6"><span id="chiffre-2" class="erreur-404">4</span></div>
+
     </div>
     <p>Psst... Il semblerait que vous n’êtes pas là où vous devriez être... </p>
 
@@ -87,12 +66,18 @@
 <footer>
 
     <div class="img-footer">
-
-
         <div class="rs-desktop">
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
 

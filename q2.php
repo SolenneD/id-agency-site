@@ -47,33 +47,8 @@
 </head>
 <body id="background-questionnaire">
 
-<header class="header">
-    <h1 class="logo">
-        <a href="http://www.paceme.fr/">
-            <img src="src/logo-blanc/logo-desktop-blanc.png" alt="logo-paceme" class="desktop">
-            <img src="src/logo-blanc/logo-tablette-blanc.png" alt="logo-paceme" class="tablette">
-            <img src="src/logo-blanc/logo-mobile-blanc.png" alt="logo-paceme" class="mobile">
-        </a>
-    </h1>
-    <div class="menu blanc">
-        <nav role="navigation" id="burger">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <div id="menu">
-                    <a href="index.php">Home</a>
-                    <a href="labague.php">La Bague</a>
-                    <a href="solo.php">Les Modes</a>
-                    <a href="propos-nous.php">À propos</a>
-                    <a href="contact.php">Contact</a>
-                    <a href="mentions-legales.php">Mentions Légales</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
+<?php include("include/headerBlack.php") ?>
+
 
 <section id="q2" class="container col-10">
 
@@ -97,19 +72,20 @@
     <h2>Vous êtes ?</h2>
 
 
-    <form action="">
+    <form action="q3.php" method="post">
+        <input class="cache" hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
         <p class="align-input">
-            <input id="celibataire" type="radio" name="situation" value="celibataire">Célibataire<br>
+            <input id="celibataire" type="radio" name="q2" value="celibataire">Célibataire<br>
             <label for="celibataire"></label>
         </p>
 
         <p class="align-input">
-            <input id="couple" type="radio" name="situation" value="couple">En couple<br>
+            <input id="couple" type="radio" name="q2" value="couple">En couple<br>
             <label for="couple"></label>
         </p>
 
         <p class="align-input">
-            <input id="libre" type="radio" name="situation" value="libre">En relation libre<br>
+            <input id="libre" type="radio" name="q2" value="libre">En relation libre<br>
             <label for="libre"></label>
         </p>
 
@@ -133,6 +109,14 @@
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
 
