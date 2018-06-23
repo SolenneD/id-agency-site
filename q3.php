@@ -47,7 +47,7 @@
 </head>
 <body id="background-questionnaire">
 
-<?php include"include/headerBlack.php"; ?>
+<?php include("include/headerBlack.php") ?>
 
 
 <section id="q2" class="container col-10">
@@ -56,9 +56,9 @@
     <div class="etapes row">
         <p href="q1.html" class="question q-1 prev">1</p>
         <div class="trait-q"></div>
-        <p href="q2.html" class="question q-2 active">2</p>
+        <p href="q2.html" class="question q-2 prev">2</p>
         <div class="trait-q"></div>
-        <p href="q3.html" class="question q-3">3</p>
+        <p href="q3.html" class="question q-3 active">3</p>
         <div class="trait-q"></div>
         <p href="q4.html" class="question q-4">4</p>
         <div class="trait-q"></div>
@@ -69,12 +69,12 @@
 
 
     <div class="trait"></div>
-    <h2>Vous êtes plutôt ?</h2>
+    <h2>Vous êtes ?</h2>
 
 
     <form action="q4.php" method="post">
-        <input hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
-        <input hidden type="text" name="q2" value="<?php echo $_POST['q2'] ?>">
+        <input class="cache" hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
+        <input class="cache" hidden type="text" name="q2" value="<?php echo $_POST['q2'] ?>">
         <p class="align-input">
             <input id="introverti" type="radio" name="q3" value="introverti">Introverti<br>
             <label for="introverti"></label>
@@ -110,6 +110,14 @@
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
 

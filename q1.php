@@ -47,16 +47,16 @@
 </head>
 <body id="background-questionnaire">
 
-<?php include"include/headerBlack.php"; ?>
+<?php include("include/headerBlack.php") ?>
 
 
 <section id="q2" class="container col-10">
 
 
     <div class="etapes row">
-        <p href="q1.html" class="question q-1 prev">1</p>
+        <p href="q1.html" class="question q-1 active">1</p>
         <div class="trait-q"></div>
-        <p href="q2.html" class="question q-2 active">2</p>
+        <p href="q2.html" class="question q-2">2</p>
         <div class="trait-q"></div>
         <p href="q3.html" class="question q-3">3</p>
         <div class="trait-q"></div>
@@ -103,6 +103,14 @@
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
         </div>
     </div>
 

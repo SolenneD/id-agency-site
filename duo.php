@@ -46,77 +46,47 @@
     </script>
 </head>
 <body>
-<header class="header">
-    <h1 class="logo">
-        <a href="http://www.paceme.fr/">
-            <img src="src/logo-noir/logo-desktop-noir.png" alt="logo-paceme" class="desktop">
-            <img src="src/logo-noir/logo-tablette-noir.png" alt="logo-paceme" class="tablette">
-            <img src="src/logo-noir/logo-mobile-noir.png" alt="logo-paceme" class="mobile">
-        </a>
-    </h1>
-    <div class="menu">
-        <nav role="navigation" id="burger">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <div id="menu">
-                    <a href="index.php">Home</a>
-                    <a href="labague.php">La Bague</a>
-                    <a href="solo.php">Les Modes</a>
-                    <a href="propos-nous.php">À propos</a>
-                    <a href="contact.php">Contact</a>
-                    <a href="mentions-legales.php">Mentions Légales</a>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
+<?php include("include/headerWhite.php") ?>
+
 <section id="page-lesmodes" class="container col-10 row">
     <article class="col-6">
         <div class="trait"></div>
         <h2>Les Modes</h2>
 
         <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
+            <div id="solo" class="rond-mode"></div>
             <div class="droit-mode">
                 <p class="champ-mode-blanc moyen-blanc">Solo</p>
                 <p class="champ-mode-blanc petit-blanc">Trouvez votre plaisir dans la musique...</p>
             </div>
             <a href="solo.php" class="test-mode">Tester</a>
         </article>
+
         <article class="champ-mode-petit active-champ">
-            <div class="rond-mode"></div>
+            <div id="duo" class="rond-mode"></div>
             <div class="droit-mode">
                 <p class="champ-mode-blanc moyen-blanc">Duo</p>
                 <p class="champ-mode-blanc petit-blanc">Laissez vos corps guider la musique...</p>
             </div>
             <a href="duo.php" class="test-mode">Tester</a>
         </article>
+
         <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
+            <div id="versus" class="rond-mode"></div>
             <div class="droit-mode">
                 <p class="champ-mode-blanc moyen-blanc">Versus</p>
                 <p class="champ-mode-blanc petit-blanc">Qui auras le plus de plaisir musical ?!</p>
             </div>
-            <a href="versus.html" class="test-mode">Tester</a>
+            <a href="#" class="test-mode">À venir</a>
         </article>
+
         <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
-            <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Nirvana</p>
-                <p class="champ-mode-blanc petit-blanc">Vibrez à chaque note...</p>
-            </div>
-            <a href="nirvana.html" class="test-mode">Tester</a>
-        </article>
-        <article class="champ-mode-petit">
-            <div class="rond-mode"></div>
+            <div id="band" class="rond-mode"></div>
             <div class="droit-mode">
                 <p class="champ-mode-blanc moyen-blanc">Band</p>
                 <p class="champ-mode-blanc petit-blanc">Devenez l’instrument de vos plaisir...</p>
             </div>
-            <a href="band.html" class="test-mode">Tester</a>
+            <a href="#" class="test-mode">À venir</a>
         </article>
 
     </article>

@@ -1,6 +1,6 @@
 <?php
 
-include"config/settings.php"; 
+include"config/settings.php";
 
 $resultat = 0;
 $sexe = 0;
@@ -33,34 +33,39 @@ if($_POST['q4'] == "libertins"){
     $resultat = $resultat + 3;
 }
 
+$zero = 0;
+$six = 6;
+$cinq = 5;
+$sept = 7;
+$huit = 8;
 
 if($resultat == 0){
     $rockeur = "Beatles";
     $horoscope = $db->prepare('SELECT * FROM horoscope WHERE score = :i');
-    $horoscope->bindParam(':i', 0, PDO::PARAM_STR);
+    $horoscope->bindParam(':i', $zero, PDO::PARAM_STR);
     $horoscope->execute();
     $data = $horoscope->fetch(PDO::FETCH_ASSOC);
 }
-if(0 < $resultat < 6 ){
+if(0 < $resultat && $resultat < 6 ){
     $rockeur = "Lennon";
-    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score < :i');
-    $horoscope->bindParam(':z', 0, PDO::PARAM_STR);
-    $horoscope->bindParam(':i', 6, PDO::PARAM_STR);
+    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score AND score < :i');
+    $horoscope->bindParam(':z', $zero, PDO::PARAM_STR);
+    $horoscope->bindParam(':i', $six, PDO::PARAM_STR);
     $horoscope->execute();
     $data = $horoscope->fetch(PDO::FETCH_ASSOC);
 }
-if(5 < $resultat < 7){
+if(5 < $resultat && $resultat < 7){
     $rockeur = "Halliday";
-    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score < :i');
-    $horoscope->bindParam(':z', 5, PDO::PARAM_STR);
-    $horoscope->bindParam(':i', 7, PDO::PARAM_STR);
+    $horoscope = $db->prepare('SELECT * FROM horoscope WHERE :z < score AND score < :i');
+    $horoscope->bindParam(':z', $cinq, PDO::PARAM_STR);
+    $horoscope->bindParam(':i', $sept, PDO::PARAM_STR);
     $horoscope->execute();
     $data = $horoscope->fetch(PDO::FETCH_ASSOC);
 }
 if($resultat > 8){
     $rockeur = "Beatles";
     $horoscope = $db->prepare('SELECT * FROM horoscope WHERE score > :i');
-    $horoscope->bindParam(':i', 8, PDO::PARAM_STR);
+    $horoscope->bindParam(':i', $huit, PDO::PARAM_STR);
     $horoscope->execute();
     $data = $horoscope->fetch(PDO::FETCH_ASSOC);
 }
@@ -115,8 +120,7 @@ if($resultat > 8){
 </head>
 <body id="background-questionnaire">
 
-<?php include"include/headerBlack.php"; ?>
-
+<?php include("include/headerBlack.php") ?>
 
 <section id="q2" class="container col-10">
 
@@ -160,11 +164,8 @@ if($resultat > 8){
 
     </article>
     <article class="col-6 rockattitude" style="float: right">
-
-        <h4>Vous ressemblez à <?= $data['rockeur'] ?></h4>
-        <p><?= $data['texte'] ?>
-       
-        </p>
+        <h4>Vous ressemblez à <span><?= $data['rockeur'] ?></span></h4>
+        <p><?= $data['texte'] ?></p>
 
     </article>
 

@@ -47,7 +47,7 @@
 </head>
 <body id="background-questionnaire">
 
-<?php include"include/headerBlack.php"; ?>
+<?php include("include/headerBlack.php") ?>
 
 
 <section id="q2" class="container col-10">
@@ -73,7 +73,7 @@
 
 
     <form action="q3.php" method="post">
-        <input hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
+        <input class="cache" hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
         <p class="align-input">
             <input id="celibataire" type="radio" name="q2" value="celibataire">Célibataire<br>
             <label for="celibataire"></label>
