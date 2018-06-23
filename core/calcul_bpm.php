@@ -4,6 +4,7 @@ include"../config/settings.php";
 $bpm = $_POST['clic']*6;
 
 $resultats = array();
+$resultatsc = array();
 
 $c_0 = 0;
 $c_91 = 91;
@@ -124,7 +125,39 @@ session_start();
 $deezer_url = "https://api.deezer.com/track/".$resultatFinal."?access_token=". $_SESSION['deezer_access_token'];
 $response = json_decode(file_get_contents($deezer_url));
 $url = $response->{'preview'};
-//$url = $response->{'data'}[0]->{'preview'};
 
 
-echo $url;
+
+if(0 < $bpm AND $bpm < 101 ){
+    $citation = $db->prepare('SELECT * FROM citation WHERE :a < bpm AND bpm < :i');
+    $citation->bindParam(':a', $c_0, PDO::PARAM_STR);
+    $citation->bindParam(':i', $c_101, PDO::PARAM_STR);
+    $citation->execute();
+    while($dataC = $citation->fetch(PDO::FETCH_ASSOC)){
+        array_push($resultatsc, $dataC['texte']);
+    }
+}
+
+if(100 < $bpm && $bpm < 141){
+    $citation = $db->prepare('SELECT * FROM citation WHERE :a < bpm AND bpm < :i');
+    $citation->bindParam(':a', $c_100, PDO::PARAM_STR);
+    $citation->bindParam(':i', $c_141, PDO::PARAM_STR);
+    $citation->execute();
+    while($dataC = $citation->fetch(PDO::FETCH_ASSOC)){
+        array_push($resultatsc, $dataC['texte']);
+    }
+}
+
+if(140 < $bpm){
+    $citation = $db->prepare('SELECT * FROM citation WHERE :a < bpm');
+    $citation->bindParam(':a', $c_140, PDO::PARAM_STR);
+    $citation->execute();
+    while($dataC = $citation->fetch(PDO::FETCH_ASSOC)){
+        array_push($resultatsc, $dataC['texte']);
+    }
+}
+
+$resultatc = array_rand($resultatsc);
+$resultatFinalc = $resultatsc[$resultatc];
+
+echo $url.'+'.$resultatFinalc;
