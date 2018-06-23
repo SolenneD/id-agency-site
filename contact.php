@@ -128,8 +128,8 @@ EOT;
 
             <div id="btn-checkbox">
                 <div class="align-input">
-                    <input name="newsletter" value="1" type="checkbox">
-                    <label >S’inscrire à la newsletter</label>
+                    <input id="newsletter" name="newsletter" value="1" type="checkbox">
+                    <label for="newsletter">S’inscrire à la newsletter</label>
                 </div>
                 <div class="align-input">
                     <a href="src/kit-presse/kit-presse.zip" download="kit-presse">

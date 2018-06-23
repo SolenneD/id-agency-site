@@ -188,23 +188,13 @@
 <footer class="footer">
 
     <div class="img-footer">
-        <svg width="1280" height="350" viewBox="0 0 1280 350" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M722.248 1032.83C450.743 940.909 127.622 956.66 0 976.025V0H1432L1415.51 1128.37C1078.12 1147.73 1061.63 1147.73 722.248 1032.83Z" transform="translate(-75 1138) scale(1 -1)" fill="white"/>
-            <path d="M722.248 1032.83C450.743 940.909 127.622 956.66 0 976.025V0H1432L1415.51 1128.37C1078.12 1147.73 1061.63 1147.73 722.248 1032.83Z" transform="translate(-75 1138) scale(1 -1)" fill="url(#paint0_linear)"/>
-            <defs>
-                <linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(306.352 1160.21) scale(786.308 671.34) rotate(-90)">
-                    <stop offset="8.07315e-10" stop-color="#BDBDBD"/>
-                    <stop offset="1" stop-color="white" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-        </svg>
+        <img src="src/vague-footer.png">
         <div class="rs-desktop">
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
             <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
         </div>
-
         <div class="rs-mobile">
             <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
             <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
