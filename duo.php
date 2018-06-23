@@ -49,7 +49,7 @@
 <?php include("include/headerWhite.php") ?>
 
 <section id="page-lesmodes" class="container col-10 row">
-    <article class="col-6">
+    <article class="col-4">
         <div class="trait"></div>
         <h2>Les Modes</h2>
 
@@ -77,7 +77,7 @@
                 <p class="champ-mode-blanc moyen-blanc">Versus</p>
                 <p class="champ-mode-blanc petit-blanc">Qui auras le plus de plaisir musical ?!</p>
             </div>
-            <a href="#" class="test-mode">À venir</a>
+            <a href="#" class="test-mode  mode-a-venir">À venir</a>
         </article>
 
         <article class="champ-mode-petit">
@@ -86,20 +86,27 @@
                 <p class="champ-mode-blanc moyen-blanc">Band</p>
                 <p class="champ-mode-blanc petit-blanc">Devenez l’instrument de vos plaisir...</p>
             </div>
-            <a href="#" class="test-mode">À venir</a>
+            <a href="#" class="test-mode  mode-a-venir">À venir</a>
         </article>
 
     </article>
-    <article class="col-6">
-        <p>Cliquez au rythme de votre coeur et la musique s’adapte à vous !</p>
+    <article class="col-8">
 
-        <div class="coeur">
-            <a class="button heart"></a>
-        </div>
+        <p style="width: auto; text-align: center;">Cliquez au rythme de votre coeur et la musique s’adapte à vous !</p>
 
-        <div class="coeur">
-            <a class="button heart"></a>
+        <div class="jeux-mode">
+            <div id="tap" class="coeur">
+                <a class="button heart"></a>
+            </div>
+
+            <div class="trait-mode2"></div>
+            <p class="bpm-mode-solo"><span id="bpmchange">0</span> BPM</p>
+            <div class="trait-mode2"></div>
+            <div class="homme">
+                <div class="heart-homme-femme"></div>
+            </div>
         </div>
+        <p class="texte-solo" id="citation">Cliquez pendant 5 secondes sur le bouton et ...</p>
 
 
     </article>
@@ -126,5 +133,19 @@
     </div>
 
 </footer>
+
+
+<script>
+    $("#tap").click(function(e){
+        $(this).append($("<div class='circle ping'>"));
+
+        window.setTimeout(function(){
+            $("div.circle:first-of-type").remove();
+        }, 1000)
+
+        //$("#ici").toggleClass("ping");
+    });
+</script>
+
 </body>
 </html>

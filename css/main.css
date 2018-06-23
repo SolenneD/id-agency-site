@@ -622,7 +622,7 @@ form .align-input>a{
 .jeux-mode>div{
 	flex-direction: column;
 	display: flex;
-	margin: 15px;
+	margin: auto 15px auto;
 }
 .jeux-mode>div>a, .jeux-mode>div>p{
 	color: #000000;
@@ -741,12 +741,19 @@ a.mode-a-venir{
 	margin-top: 35px;
 	border: 1px solid #666666;
 }
+.trait-mode2{
+	width: 90px;
+	height: 0px;
+	margin-left: 40px;
+	margin-top: 35px;
+	border: 1px solid #666666;
+}
 .bpm-mode-solo{
 	font-weight: 500;
 	line-height: 27px;
 	font-size: 18px;
 	width: auto;
-	margin: 20px 35px;
+	margin: auto 15px auto;
 }
 .jeux-mode{
 	margin: auto;
@@ -754,7 +761,7 @@ a.mode-a-venir{
 	justify-content: center;
 	text-align: center;
 	width: 100%;
-	margin-top: 20%;
+	margin-top: 15%;
 }
 .texte-solo{
 	width: 100%;
@@ -815,6 +822,31 @@ a.test-mode{
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 	background: #4A4A4A url("../src/heart.svg") no-repeat center;
 	background-size: auto;
+}
+
+/*bouton duo / versus homme coeur*/
+.homme{
+	width: 100px;
+	height: 110px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../src/modes/hommmmmmefinal.png");
+}
+.femme{
+	width: 100px;
+	height: 110px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("../src/modes/femme.png");
+}
+.heart-homme-femme{
+	background-image: url("../src/modes/heart.svg");
+	background-repeat: no-repeat;
+	margin: auto 0 auto 50px;
+	height: 25px;
+	width: 29px;
 }
 
 /*effet pulse*/
@@ -1346,7 +1378,38 @@ progress::-webkit-progress-value {
 	.champ-mode-petit{
 		width: 100%;
 	}
-
+	.jeux-mode{
+		display: block;
+	}
+	.jeux-mode>div{
+		margin: auto;
+	}
+	.jeux-mode>p, .jeux-mode + p{
+		text-align: center;
+	}
+	.trait-mode, .trait-mode2{
+		display: none !important;
+	}
+	.bpm-mode-solo{
+		margin-bottom: 15px;
+	}
+	#page-lesmodes article.col-4 {
+		margin-bottom: 70px;
+	}
+	#page-lesmodes article.col-8 p:first-child{
+		text-align: left;
+	}
+	#tap{
+		margin-bottom: 20px;
+	}
+	.rond-mode{
+		width: 45px;
+		height: 45px;
+	}
+	a.test-mode{
+		font-size: 11px;
+		text-transform: none;
+	}
 
 	/*erreur 404*/
 	#page-404 .image-erreur {
