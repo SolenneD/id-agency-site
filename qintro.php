@@ -49,7 +49,6 @@
 
 <?php include("include/headerBlack.php") ?>
 
-
 <section id="q2" class="container col-10">
     <div class="trait"></div>
     <h2>Quelle est votre niveau de Rock'Attitude ?</h2>
@@ -58,28 +57,28 @@
 
     <a href="q1.php" class="btn-question">Commencer le test</a>
 
-    <footer class="footer">
-
-        <div class="img-footer">
-            <img src="src/questionnaire/qintro.png">
-
-            <div class="rs-desktop">
-                <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
-                <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
-            </div>
-
-            <div class="rs-mobile">
-                <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
-                <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
-            </div>
-        </div>
-
-    </footer>
 
 </section>
+<footer class="footer footer-qintro">
+
+
+
+
+        <div class="rs-desktop">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
+        </div>
+
+        <div class="rs-mobile">
+            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
+        </div>
+
+
+</footer>
 </body>
 </html>
