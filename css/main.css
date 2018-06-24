@@ -928,22 +928,24 @@ a.test-mode{
 .labague{
 	background-image: url("../src/labague/header-labague.svg");
 }
-#page-labague{
-	margin-bottom: 20%;
+#page-labague, #page-labague-custom{
+	margin-bottom: 30px;
 }
 .fond-labague {
 	position: absolute;
 	z-index: -1;
 }
 #champ-mode{
-	position: absolute;
 	width: 1025px;
-	height: 231px;
+	height: 210px;
 	border-radius: 10px;
 	background-color: #000000;
 	background-image: url("../src/labague/vague-labague.svg");
 	background-position: bottom left;
 	background-repeat: no-repeat;
+}
+#page-labague-mode{
+	margin-bottom: 60px;
 }
 .champ-mode-blanc{
 	font-size: 24px;
@@ -961,10 +963,125 @@ a.test-mode{
 }
 .caracteristique{
 	text-align: center;
+	margin-right: 20px;
+}
+.caracteristique:last-child{
+	text-align: center;
+	margin-right: 0;
 }
 .caracteristique>p{
 	width: auto;
+
 }
+.cara-3{
+	justify-content: center;
+}
+.caracteristique>div{
+	width:50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin: auto auto 15px;
+}
+#autonomie + p, #waterproof + p, #cara + p{
+	font-weight: bold;
+	width: auto;
+	margin-bottom: 5px;
+}
+#cara{
+	background-image: url("../src/labague/caracteristique.svg");
+}
+#waterproof{
+	background-image: url("../src/labague/waterproof.svg");
+}
+#autonomie{
+	background-image: url("../src/labague/autonomie.svg");
+}
+
+.bague-custom{
+	background-size: contain;
+	background: url("../src/motiv-rings.png") no-repeat center;
+}
+
+#page-labague-custom .bague-custom{
+	margin-right: 40px;
+}
+#page-labague-custom .custom{
+	justify-content: center;
+}
+#page-labague-custom .custom div{
+	margin-bottom: 20px;
+}
+#page-labague-custom .custom .col-4 div form p label{
+	font-size: 12px;
+	text-transform: uppercase;
+}
+#page-labague-custom .custom .col-4 div form p input{
+	width: 100%;
+	padding: 15px 0px;
+	border-bottom: 1px solid #828282;
+}
+
+#page-labague-custom .custom .col-4 div form p input::-webkit-input-placeholder {
+	color: #C4C4C4;
+}
+#page-labague-custom .custom .col-4 div form p input::-moz-placeholder {
+	color: #C4C4C4;
+}
+#page-labague-custom .custom .col-4 div form p input:-ms-input-placeholder {
+	color: #C4C4C4;
+}
+#page-labague-custom .custom .col-4 div form p input::placeholder {
+	color: #C4C4C4;
+}
+
+#page-labague-custom h5{
+	font-size: 12px;
+	border-bottom: 1px solid #000;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+#page-labague-custom .couleur{
+	justify-content: space-around;
+}
+.column-couleur{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+.column-couleur span{
+	font-size: 11px;
+	text-align: center;
+}
+#page-labague-custom .select{
+	height: 25px;
+	width: 25px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: auto auto 10px;
+}
+#page-labague-custom .select.active-select{
+	box-shadow: 0 0 2px 1px #ccc;
+
+}
+#page-labague-custom #noir{
+	background-color: #000000;
+}
+#page-labague-custom #blanc{
+	background-color: #FFFFFF;
+	border: 1px solid #cccccc;
+}
+#page-labague-custom #anthracite{
+	background-color: #293133;
+}
+#page-labague-custom #inox{
+	background-color: #c8c7c2;
+}
+#page-labague-custom #acier{
+	background-color: #AFAFAF;
+}
+
 
 /******* 404 ******/
 #page-404{
@@ -1473,6 +1590,29 @@ progress::-webkit-progress-value {
 	}
 	#p-download, .download{
 		display: none;
+	}
+
+	/*labague*/
+	#page-labague-custom .custom div.row{
+		display: flex;
+	}
+	.bague-custom{
+		height: 200px;
+		background-size: contain;
+	}
+	.video{
+		width: 100%;
+	}
+	#champ-mode{
+		width: 100%;
+		height: 200px;
+		position: inherit;
+	}
+	#champ-mode>a{
+		text-transform: none !important;
+	}
+	.champ-mode-blanc{
+		font-size: 16px;
 	}
 
 
