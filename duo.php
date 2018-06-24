@@ -94,7 +94,7 @@
 
         <p style="width: auto; text-align: center;">Choisissez votre partenaire</p>
 
-        <div class="jeux-mode">
+        <div class="jeux-mode jeux-mode-duo">
 
             <a href="duo-femme.php" class="portail-duo portail-femme"></a>
 

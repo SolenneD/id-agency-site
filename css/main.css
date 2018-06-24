@@ -1515,13 +1515,18 @@ progress::-webkit-progress-value {
 		margin-bottom: 15px;
 	}
 	#page-apropos .col-6.row div:last-child .flip-container{
-		margin-right: 30px;
+		margin-right: 0px;
 	}
 	.decoration-rond-3 + div{
 		display: flex;
 		flex-wrap: wrap;
 		width: 95%;
 		margin: auto;
+		justify-content: center;
+	}
+	.front{
+		width: 100px;
+		height: 100px;
 	}
 
 	/*modes*/
@@ -1530,6 +1535,12 @@ progress::-webkit-progress-value {
 	}
 	.jeux-mode{
 		display: block;
+	}
+	.jeux-mode-duo{
+		display: flex;
+	}
+	.portail-duo {
+		margin-right: 20px;
 	}
 	.jeux-mode>div{
 		margin: auto;
