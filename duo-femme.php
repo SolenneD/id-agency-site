@@ -92,14 +92,21 @@
     </article>
     <article class="col-8">
 
-        <p style="width: auto; text-align: center;">Choisissez votre partenaire</p>
+        <p style="width: auto; text-align: center;">Cliquez au rythme de votre coeur et la musique s’adapte à vous !</p>
 
         <div class="jeux-mode">
+            <div id="tap" class="coeur">
+                <a class="button heart"></a>
+            </div>
 
-            <a href="duo-femme.php" class="portail-duo portail-femme"></a>
-
-            <a href="duo-homme.php" class="portail-duo portail-homme"></a>
+            <div class="trait-mode2"></div>
+            <p class="bpm-mode-solo"><span id="bpmchange">0</span> BPM</p>
+            <div class="trait-mode2"></div>
+            <div class="femme">
+                <div class="heart-homme-femme"></div>
+            </div>
         </div>
+        <p class="texte-solo" id="citation">Cliquez pendant 5 secondes sur le bouton et ...</p>
 
 
     </article>

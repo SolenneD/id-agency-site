@@ -1,8 +1,31 @@
 <!DOCTYPE html>
+<?php
+
+$data_product = array(
+
+        "noirdiament"=>"src/motiv-rings.png",
+        "anthracitediament" =>"src/cursor-rock.png"
+);
+$curren_image = false;
+if(isset($_GET['couleur']) && isset($_GET['ornement'])){
+    $data_images = json_decode($data_product);
+    $color = $_GET['couleur'];
+    $ornement = $_GET['ornement'];
+    $combine = $color.$ornement;
+    $curren_image = $data_product[$combine];
+}
+
+?>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
     <title>Pace Me - La bague</title>
+
+    <meta id="meta-images" property="og:url"           content="http://preprod.paceme.fr/<?php echo  ($curren_image)?$curren_image:"src/motiv-rings.png" ?>" />
+    <meta property="og:type"          content="service" />
+    <meta property="og:title"         content="Pace Me" />
+    <meta property="og:description"   content="Personnaliser votre bague de plaisir avec Pace Me" />
+    <meta id="meta-image" property="og:image"         content="http://preprod.paceme.fr/<?php echo  ($curren_image)?$curren_image:"src/motiv-rings.png" ?>"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -47,6 +70,15 @@
 </head>
 <body>
 <?php include("include/headerWhite.php") ?>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.0&appId=250004505760813&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="fond-labague">
     <svg width="1280" height="752" viewBox="0 0 1280 752" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,6 +129,7 @@
     </article>
     <div class="row custom">
         <div class="bague-custom col-5">
+            <img id="image_facebook" class="img-partager" style="width: 100%" src="<?php echo ($curren_image)?$curren_image:"src/motiv-rings.png" ?>" alt="">
 
         </div>
         <div class="col-4">
@@ -108,7 +141,7 @@
                         <span>Noir</span>
                     </div>
                     <div class="column-couleur">
-                        <a id="anthracite" class="select"></a>
+                        <a id="anthracite" data-image="src/cursor-rock.png" class="select"></a>
                         <span>Anthracite</span>
                     </div>
                     <div class="column-couleur">
@@ -162,8 +195,9 @@
                         <input placeholder="Facultatif" type="text" id="fonctionnalite" name="fonctionnalite">
                     </p>
 
-
                     <input type="submit">
+
+                    <div class="fb-share-button" data-href="http://preprod.paceme.fr/labague.php" data-layout="button" data-size="large" data-action="share" data-show-faces="true" data-share="true" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager sur Facebook</a></div>
                 </form>
                 
             </div>
@@ -179,7 +213,7 @@
     <article id="champ-mode">
     <p class="champ-mode-blanc">Quel mode est fait pour vous ?! <br>Découvrez votre niveau de Rock’Attitude !
     </p>
-    <a style="position: relative;z-index: 2;color: #000000;background-color: #ffffff;margin: auto;" href="#" class="btn">Commencer le test</a>
+    <a style="position: relative;z-index: 2;color: #000000;background-color: #ffffff;margin: auto;" href="qintro.php" class="btn">Commencer le test</a>
 
 </article>
 </section>
@@ -205,5 +239,36 @@
 
 </footer>
 
+
+
 </body>
+<script>
+    var data_product_j = '<?php echo json_encode(array('data'=>$data_product));?>';
+    var data_product = JSON.parse(data_product_j);
+    $(document).ready(function (){
+        $(".fb-share-button").attr("data-href",document.location.href);
+        <?php echo (isset($_GET['couleur']))?"$('html, body').animate({scrollTop: $('#anthracite').offset().top},2000);":""?>
+    });
+    var  displayed_image = $("#image_facebook");
+    var  meta_image = $("#meta_image");
+    var  meta_images = $("#meta_images");
+
+    var ornement = "diament";
+    $("#anthracite").click(function() {
+        var couleur = "anthracite";
+        var base_url = document.location.href.split("?");
+        var url = base_url[0] + "?couleur=" + couleur + "&ornement=" + ornement;
+        document.location = url;
+    });
+        /*
+        var combin = couleur+ornement;
+        $(".fb-share-button").attr("data-href",url);
+        displayed_image.attr("src",data_product.data[""+combin]);
+        var image_url =window.location.protocol+ '//'+window.location.host+'/'+data_product.data[""+combin];
+        meta_images.attr("content",image_url);
+        meta_image.attr("content",image_url);
+
+    } );*/
+
+</script>
 </html>
