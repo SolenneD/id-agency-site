@@ -128,17 +128,5 @@
 </footer>
 
 
-<script>
-    $("#tap").click(function(e){
-        $(this).append($("<div class='circle ping'>"));
-
-        window.setTimeout(function(){
-            $("div.circle:first-of-type").remove();
-        }, 1000)
-
-        //$("#ici").toggleClass("ping");
-    });
-</script>
-
 </body>
 </html>

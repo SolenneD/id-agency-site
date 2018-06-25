@@ -44,107 +44,25 @@
         })();
 
     </script>
-    <script>
-        $(function(){
-            var clic = 0;
-            var bpm;
-            var audiofile;
-
-            $("#tap").click(function(){
-                clic =clic + 1;
-            });
-
-            window.setInterval(function()
-            {
-                $.ajax({
-                    type: "post",
-                    url: "core/calcul_bpm.php",
-                    data: {clic: clic}
-                }).done(function (msg) {
-                    {
-                        try{
-                            audiofile.pause();
-                        }catch(e){
-
-                        }
-                        audiofile = new Audio(msg);
-                        audiofile.play();
-                        console.log("prout");
-
-                        // $('embed').attr('src', msg);
-                        // clic = 0;
-                    }
-                });
-            }, 5000); //10000 milliseconds = 10 seconds
-        });
-
-    </script>
 </head>
 <body>
 <?php include("include/headerWhite.php") ?>
 
-<section id="page-lesmodes" class="container col-10 row">
-    <article class="col-4">
-        <div class="trait"></div>
-        <h2>Les Modes</h2>
+<section id="page-connexion" class="container col-10">
+    <div class="trait"></div>
+    <h2>Les modes</h2>
 
-        <article class="champ-mode-petit active-champ">
-            <div id="solo" class="rond-mode"></div>
-            <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Solo</p>
-                <p class="champ-mode-blanc petit-blanc">Trouvez votre plaisir dans la musique...</p>
-            </div>
-            <a href="solo.php" class="test-mode">Tester</a>
-        </article>
+    <p style="width: auto">Choississez votre plateforme de musique</p>
 
-        <article class="champ-mode-petit">
-            <div id="duo" class="rond-mode"></div>
-            <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Duo</p>
-                <p class="champ-mode-blanc petit-blanc">Laissez vos corps guider la musique...</p>
-            </div>
-            <a href="#" class="test-mode mode-a-venir">À venir</a>
-        </article>
-
-        <article class="champ-mode-petit">
-            <div id="versus" class="rond-mode"></div>
-            <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Versus</p>
-                <p class="champ-mode-blanc petit-blanc">Qui auras le plus de plaisir musical ?!</p>
-            </div>
-            <a href="#" class="test-mode mode-a-venir">À venir</a>
-        </article>
-
-        <article class="champ-mode-petit">
-            <div id="band" class="rond-mode"></div>
-            <div class="droit-mode">
-                <p class="champ-mode-blanc moyen-blanc">Band</p>
-                <p class="champ-mode-blanc petit-blanc">Devenez l’instrument de vos plaisir...</p>
-            </div>
-            <a href="#" class="test-mode mode-a-venir">À venir</a>
-        </article>
-
-    </article>
-    <article class="col-8">
-        <p style="width: auto; text-align: center;">Choississez votre plateforme de musique</p>
-
-
-        <div class="jeux-mode">
-            <div>
-                <a href="deezer_auth.php" class="deezer musique-mode">Deezer</a>
-                <p class="spotify musique-mode">Spotify</p>
-            </div>
-            <div>
-                <p class="soundcloud musique-mode">Soundcloud</p>
-                <p class="youtube musique-mode">Youtube</p>
-            </div>
-
-
-        </div>
+    <div class="margin row">
+            <a href="deezer_auth.php" class="musique-mode deezer"></a>
+            <p class="musique-mode spotify avenir"></p>
+            <p class="musique-mode youtube avenir"></p>
+    </div>
 
 
 
-    </article>
+
 </section>
 <footer class="footer">
 
@@ -168,17 +86,6 @@
 
 </footer>
 
-<script>
-    $("#tap").click(function(e){
-        $(this).append($("<div class='circle ping'>"));
-
-        window.setTimeout(function(){
-            $("div.circle:first-of-type").remove();
-        }, 1000)
-
-        //$("#ici").toggleClass("ping");
-    });
-</script>
 
 
 </body>

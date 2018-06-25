@@ -71,7 +71,7 @@ body{
 .footer{
 	width: 100%;
 	/*height: 50px;*/
-	position: absolute;
+	position: inherit;
 	z-index: -3;
 }
 .footer>.img-footer{
@@ -614,11 +614,38 @@ form .align-input>a{
 /****** PAGE MODE TEST ********/
 /*connexion*/
 .musique-mode{
-	width: 120px;
-	height: 120px;
-	border-radius: 50%;
+	width: 150px;
+	height: 65px;
 	border: 1px solid #000000;
+	box-sizing: border-box;
+	border-radius: 100px;
+	margin-right: 30px;
 }
+.musique-mode:last-child{
+	margin-right: 0;
+}
+#page-connexion div.margin.row{
+	justify-content: center;
+}
+.musique-mode.deezer{
+	background-size: auto;
+	background: url("../src/modes/logo_deezer.svg") no-repeat center;
+}
+.musique-mode.spotify{
+	background-size: auto;
+	background: url("../src/modes/logo_spotify.svg") no-repeat center;
+}
+.musique-mode.spotify.avenir{
+	opacity: 0.2;
+}
+.musique-mode.youtube{
+	background-size: auto;
+	background: url("../src/modes/logo_youtube.svg") no-repeat center;
+}
+.musique-mode.youtube.avenir{
+	opacity: 0.2;
+}
+
 .jeux-mode>div{
 	flex-direction: column;
 	display: flex;
