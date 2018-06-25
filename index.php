@@ -77,7 +77,7 @@
     <section id="accueil">
         <div class="title-home">
             <p class="title-accueil">Découvrez votre niveau de Rock’Attitude !</p>
-            <a href="qintro.php" class="btn btn-question">Commencer le test</a>
+            <a onClick="_gaq.push(['_trackEvent', 'Test Questionnaire', 'Clic', 'Pace Me']);" title="Test Home Page" href="qintro.php" class="btn btn-question">Commencer le test</a>
         </div>
 
         <div class="courbe">
@@ -100,7 +100,7 @@
                 <div class="trait"></div>
                 <h2>Notre Concept</h2>
                 <p>Pace Me synchronise la musique à votre rythme cardiaque pendant l’acte sexuel. Laissez notre application gérer la musique.</p>
-                <a href="solo.php" class="btn">Vers les modes</a>
+                <a onClick="_gaq.push(['_trackEvent', 'Vers les Modes', 'Clic', 'Pace Me']);" title="Modes Home Page" href="duo.php" class="btn">Vers les modes</a>
                 <div class="concept-compatible">
                     <p>* Compatible avec : Applewatch, Fitbit, Samsung watch, Huawei watch.</p>
                     <p>* Se connecter avec son compte Deezer et Spotify</p>
@@ -132,21 +132,26 @@
         <div class="img-footer">
             <img src="src/vague-footer.png">
             <div class="rs-desktop">
-                <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
-                <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Facebook Home', 'Clic', 'Pace Me']);" title="Facebook Home" href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Instagram Home', 'Clic', 'Pace Me']);" title="Instagram Home" href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Twitter Home', 'Clic', 'Pace Me']);" title="Twitter Home" href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Soundcloud Home', 'Clic', 'Pace Me']);" title="Soundcloud Home" href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
             </div>
 
             <div class="rs-mobile">
-                <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
-                <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud fa-2x"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Facebook Home', 'Clic', 'Pace Me']);" title="Facebook Home" href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Instagram Home', 'Clic', 'Pace Me']);" title="Instagram Home" href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Twitter Home', 'Clic', 'Pace Me']);" title="Twitter Home" href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter fa-2x"></i></a>
+                <a onClick="_gaq.push(['_trackEvent', 'Soundcloud Home', 'Clic', 'Pace Me']);" title="Soundcloud Home" href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud fa-2x"></i></a>
             </div>
         </div>
 
     </footer>
+
+    <script>
+        var pageTracker = _gat._getTracker('UA-120265874-1');
+        pageTracker._trackPageview();
+    </script>
 
 
 </body>

@@ -173,7 +173,7 @@ if($resultat > 8){
 
     <div class="col-10 container">
         <p>Le mode <span><?= $data['mode'] ?></span> est donc fait pour vous ! </p>
-        <a href="<?= $data['lien'] ?>">Tester</a>
+        <a onClick="_gaq.push(['_trackEvent', 'Lien Modes Questionnaire', 'Clic', 'Pace Me']);" title="Lien Modes Questionnaire" href="<?= $data['lien'] ?>">Tester</a>
     </div>
 
 
@@ -198,7 +198,10 @@ if($resultat > 8){
 
 </footer>
 
-
+<script>
+    var pageTracker = _gat._getTracker('UA-120265874-1');
+    pageTracker._trackPageview();
+</script>
 
 </body>
 </html>

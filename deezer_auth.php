@@ -5,7 +5,7 @@ include('config/settings.php');
 
 $app_id      = "283624" ;
 $app_secret = "037bd04dc42173da70a724c6f5fdcd4f" ;
-$my_url      = "http://preprod.paceme.fr/deezer_auth.php" ;
+$my_url      = "http://paceme.fr/deezer_auth.php" ;
 //$my_url      = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 

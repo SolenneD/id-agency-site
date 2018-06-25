@@ -128,19 +128,19 @@ EOT;
 
             <div id="btn-checkbox">
                 <div class="align-input">
-                    <input id="newsletter" name="newsletter" value="1" type="checkbox">
+                    <input onClick="_gaq.push(['_trackEvent', 'Newsletter', 'Clic', 'Pace Me']);" title="Newsletter" id="newsletter" name="newsletter" value="1" type="checkbox">
                     <label for="newsletter">S’inscrire à la newsletter</label>
                 </div>
                 <div class="align-input">
                     <a href="src/kit-presse/kit-presse.zip" download="kit-presse">
                         <div class="download"></div>
-                        <p id="p-download">Télécharger le kit presse</p>
+                        <p onClick="_gaq.push(['_trackEvent', 'Kit Presse', 'Clic', 'Pace Me']);" title="Kit Presse" id="p-download">Télécharger le kit presse</p>
                     </a>
                 </div>
             </div>
 
 
-            <input class="btn-valid" type="submit" name="envoi" value="Envoyer">
+            <input onClick="_gaq.push(['_trackEvent', 'Formulaire envoyer', 'Clic', 'Pace Me']);" title="Formulaire envoyer" class="btn-valid" type="submit" name="envoi" value="Envoyer">
 
 
         </form>
@@ -171,6 +171,11 @@ EOT;
 
 
 </footer>
+
+<script>
+    var pageTracker = _gat._getTracker('UA-120265874-1');
+    pageTracker._trackPageview();
+</script>
 
 </body>
 </html>
