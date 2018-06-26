@@ -1,0 +1,9 @@
+$(function(){
+    $('#btn-header').click(function(){
+        if($('#menu').hasClass('active_header')){
+            $('#menu').removeClass('active_header');
+        }else{
+            $('#menu').addClass('active_header');
+        }
+    });
+});

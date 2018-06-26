@@ -26,10 +26,11 @@
     <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+
     <link rel="icon" type="image/png" href="src/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+    <script src="js/custom.js"></script>
     <!--analytics-->
     <script type="text/javascript">
 
@@ -45,7 +46,7 @@
 
     </script>
 </head>
-<body>
+<body class="vague-bottom">
     <header>
         <h1 class="logo">
             <a href="http://www.paceme.fr/">
@@ -57,14 +58,14 @@
         <div class="menu blanc">
             <nav role="navigation" id="burger">
                 <div id="menuToggle">
-                    <input type="checkbox" />
+                    <input id="btn-header" type="checkbox" />
                     <span></span>
                     <span></span>
                     <span></span>
-                    <div id="menu">
+                    <div class="active_header" id="menu">
                         <a href="index.php">Home</a>
 <!--                        <a href="labague.php">La Bague</a>-->
-                        <a href="solo.php">Les Modes</a>
+                        <a href="connexion.php?mode=solo">Les Modes</a>
                         <a href="propos-nous.php">À propos</a>
                         <a href="contact.php">Contact</a>
                         <a href="mentions-legales.php">Mentions Légales</a>
@@ -82,7 +83,7 @@
 
         <div class="courbe">
             <img src="src/vector-accueil.png" alt="bague" class="courbe_image">
-            <i class="fas fa-angle-down fa-2x" style="color: #000000"></i>
+            <a class="js-scrollTo" href="#notre-concept"><i class="pulsate-fwd fas fa-angle-down fa-2x" style="color: #000000"></i></a>
         </div>
 
 
@@ -127,32 +128,23 @@
     <div class="parallax"></div>
     <!--<img  src="src/onde-points-noir.png">-->
     <div class="onde-noir"></div>
-    <footer class="footer">
-
-        <div class="img-footer">
-            <img src="src/vague-footer.png">
-            <div class="rs-desktop">
-                <a onClick="_gaq.push(['_trackEvent', 'Facebook Home', 'Clic', 'Pace Me']);" title="Facebook Home" href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
-                <a onClick="_gaq.push(['_trackEvent', 'Instagram Home', 'Clic', 'Pace Me']);" title="Instagram Home" href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
-                <a onClick="_gaq.push(['_trackEvent', 'Twitter Home', 'Clic', 'Pace Me']);" title="Twitter Home" href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
-                <a onClick="_gaq.push(['_trackEvent', 'Soundcloud Home', 'Clic', 'Pace Me']);" title="Soundcloud Home" href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
-            </div>
-
-            <div class="rs-mobile">
-                <a onClick="_gaq.push(['_trackEvent', 'Facebook Home', 'Clic', 'Pace Me']);" title="Facebook Home" href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
-                <a onClick="_gaq.push(['_trackEvent', 'Instagram Home', 'Clic', 'Pace Me']);" title="Instagram Home" href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
-                <a onClick="_gaq.push(['_trackEvent', 'Twitter Home', 'Clic', 'Pace Me']);" title="Twitter Home" href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter fa-2x"></i></a>
-                <a onClick="_gaq.push(['_trackEvent', 'Soundcloud Home', 'Clic', 'Pace Me']);" title="Soundcloud Home" href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud fa-2x"></i></a>
-            </div>
-        </div>
-
-    </footer>
+    <?php include("include/footerWhite.php") ?>
 
     <script>
         var pageTracker = _gat._getTracker('UA-120265874-1');
         pageTracker._trackPageview();
     </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+                var page = $(this).attr('href'); // Page cible
+                var speed = 750; // Durée de l'animation (en ms)
+                $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+                return false;
+            });
+        });
+    </script>
 
 </body>
 </html>

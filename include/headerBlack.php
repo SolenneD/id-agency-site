@@ -9,14 +9,14 @@
     <div class="menu blanc">
         <nav role="navigation" id="burger">
             <div id="menuToggle">
-                <input type="checkbox" />
+                <input id="btn-header" type="checkbox" />
                 <span></span>
                 <span></span>
                 <span></span>
-                <div id="menu">
+                <div class="active_header" id="menu">
                     <a href="index.php">Home</a>
-<!--                    <a href="labague.php">La Bague</a>-->
-                    <a href="solo.php">Les Modes</a>
+<!--                <a href="labague.php">La Bague</a>-->
+                    <a href="connexion.php?mode=solo">Les Modes</a>
                     <a href="propos-nous.php">À propos</a>
                     <a href="contact.php">Contact</a>
                     <a href="mentions-legales.php">Mentions Légales</a>

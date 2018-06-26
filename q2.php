@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" href="src/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+    <script src="js/custom.js"></script>
     <!--analytics-->
     <script type="text/javascript">
 
@@ -93,25 +93,6 @@
     </form>
 
 </section>
-<footer class="footer footer-q2">
-
-
-    <div class="rs-desktop">
-        <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
-        <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
-    </div>
-
-    <div class="rs-mobile">
-        <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
-        <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
-    </div>
-
-
-</footer>
 
 
 

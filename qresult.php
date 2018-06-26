@@ -21,7 +21,13 @@ if($_POST['q2'] == "libre"){
 if($_POST['q3'] == "extraverti"){
     $resultat = $resultat + 1;
 }
+if($_POST['q3'] == "curieux"){
+    $resultat = $resultat + 2;
+}
 if($_POST['q3'] == "malicieux"){
+    $resultat = $resultat + 2;
+}
+if($_POST['q3'] == "rebel"){
     $resultat = $resultat + 3;
 }
 
@@ -102,7 +108,7 @@ if($resultat > 8){
     <link rel="icon" type="image/png" href="src/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+    <script src="js/custom.js"></script>
     <!--analytics-->
     <script type="text/javascript">
 
@@ -149,17 +155,17 @@ if($resultat > 8){
             <progress class="avancement" value="<?= $data['progressrock'] ?>" max="100"></progress>
             <span class="theme">Rock’Attitude</span>
         </div>
-        <div class="bar-progress">
+        <!--<div class="bar-progress">
             <progress class="avancement" value="<?= $data['progresssonore'] ?>" max="100"></progress>
             <span class="theme">Puissance sonore</span>
         </div>
         <div class="bar-progress">
             <progress class="avancement" value="<?= $data['progressbpm'] ?>" max="100"></progress>
             <span class="theme">BPM</span>
-        </div>
+        </div> -->
         <div class="bar-progress">
             <progress class="avancement" value="<?= $data['progresssexualite'] ?>" max="100"></progress>
-            <span class="theme">Sexualité</span>
+            <span class="theme">Sex'Attitude</span>
         </div>
 
     </article>
@@ -173,30 +179,11 @@ if($resultat > 8){
 
     <div class="col-10 container">
         <p>Le mode <span><?= $data['mode'] ?></span> est donc fait pour vous ! </p>
-        <a onClick="_gaq.push(['_trackEvent', 'Lien Modes Questionnaire', 'Clic', 'Pace Me']);" title="Lien Modes Questionnaire" href="<?= $data['lien'] ?>">Tester</a>
+        <a onClick="_gaq.push(['_trackEvent', 'Lien Modes Questionnaire', 'Clic', 'Pace Me']);" title="Lien Modes Questionnaire" href="<?= $data['lien'] ?>?mode=<?php echo $data['mode'] ?>">Tester</a>
     </div>
 
 
 </section>
-<footer class="footer">
-
-
-    <div class="rs-desktop">
-        <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
-        <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
-    </div>
-
-    <div class="rs-mobile">
-        <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
-        <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
-    </div>
-
-
-</footer>
 
 <script>
     var pageTracker = _gat._getTracker('UA-120265874-1');

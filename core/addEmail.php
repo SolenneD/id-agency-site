@@ -40,6 +40,6 @@ $error = false;
         
         
 		//flash_in('success', "L'email a été ajouté");
-		redirect('../index.php');
+		redirect('../labague-confirmation2.php');
 	
 	}

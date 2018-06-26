@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<?php
+
+$data_product = array(
+
+    "noirdiament"=>"src/motiv-rings.png",
+    "anthracitediament" =>"src/cursor-rock.png"
+);
+$curren_image = false;
+if(isset($_GET['couleur']) && isset($_GET['ornement'])){
+    $data_images = json_decode($data_product);
+    $color = $_GET['couleur'];
+    $ornement = $_GET['ornement'];
+    $combine = $color.$ornement;
+    $curren_image = $data_product[$combine];
+}
+
+?>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -51,7 +68,7 @@
 
     </script>
 </head>
-<body class="vague-bottom-labague">
+<body>
 <?php include("include/headerWhite.php") ?>
 
 <div id="fb-root"></div>
@@ -63,89 +80,33 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fond-labague">
-    <svg width="1280" height="752" viewBox="0 0 1280 752" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M722.5 1200C450.9 1093.2 127.667 1111.5 0 1134V0H1432.5L1416 1311C1078.5 1333.5 1062 1333.5 722.5 1200Z" transform="translate(-6.5 -571)" fill="white"/>
-        <path d="M722.5 1200C450.9 1093.2 127.667 1111.5 0 1134V0H1432.5L1416 1311C1078.5 1333.5 1062 1333.5 722.5 1200Z" transform="translate(-6.5 -571)" fill="url(#paint0_linear)"/>
-        <defs>
-            <linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(306.459 1348) scale(786.583 780) rotate(-90)">
-                <stop offset="8.07315e-10" stop-color="#BDBDBD"/>
-                <stop offset="1" stop-color="white" stop-opacity="0"/>
-            </linearGradient>
-        </defs>
-    </svg>
-
-</div>
-<section id="page-labague" class="container col-10">
-    <article style="height: auto">
-        <div class="trait"></div>
-        <h2>La bague</h2>
-
-        <div style="margin-bottom: 30px" class="video">Video</div>
-
-        <div class="row cara-3">
-            <div class="caracteristique col-3">
-                <div id="cara"></div>
-                <p>Suivi de votre rythme </p>
-                <p>Caractéristiques</p>
-            </div>
-            <div class="caracteristique col-3">
-                <div id="waterproof"></div>
-                <p>Waterproof</p>
-                <p>Vous pouvez vivre votre vie  sans vous souciez de votre bague, elle resiste à l’eau</p>
-            </div>
-            <div class="caracteristique col-3">
-                <div id="autonomie"></div>
-                <p>Autonomie</p>
-                <p>Autonomie jusqu'à 7 jours sans avoir besoin de  recharger votre bague</p>
-            </div>
-            <div class="caracteristique col-3">
-                <div id="autonomie"></div>
-                <p>Autonomie</p>
-                <p>Autonomie jusqu'à 7 jours sans avoir besoin de  recharger votre bague</p>
-            </div>
-        </div>
-
-    </article>
-
-
-</section>
 <section style="height: auto" id="page-labague-custom" class="container col-10">
     <article class="col-10 clear">
         <div class="trait"></div>
-        <h2>Personnalisez votre bague</h2>
+        <h2>Confirmation</h2>
     </article>
+    <div class="row">
+        <div class="bague-custom col-5">
+            <img id="image_facebook" class="img-partager" style="width: 100%" src="<?php echo ($curren_image)?$curren_image:"src/motiv-rings.png" ?>" alt="">
+            <a data-href="http://preprod.paceme.fr/labague-confirmation2.php" data-layout="button" data-size="large" data-action="share" data-show-faces="true" data-share="true" data-mobile-iframe="true" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager sur Facebook</a>
 
-    <div class="choix-de-bague row col-8 container">
-
-        <div class="btn-choix">
-            <div class="choix-bague solo"></div>
-            <label for="choix-solo">Une bague<input id="choix-solo" name="choix" value="choix-solo" type="radio"></label>
         </div>
+        <div class="col-5">
 
-        <div class="btn-choix">
-            <div class="choix-bague duo"></div>
-            <label for="choix-duo">Deux bagues<input id="choix-duo" name="choix" value="choix-duo" type="radio"></label>
+            <h3>Nous avons bien reçu votre pré-commande !</h3>
+            <p>L'email est envoyé !</p>
+
+            <a class="btn" href="index.php">Retour à l'accueil</a>
+
+
         </div>
 
     </div>
-    <a class="btn container" href="labague-custom.php">Choisir</a>
 
 
-
-
-</section>
-<section id="page-labague-mode" class="container col-10">
-    <article id="champ-mode">
-        <p class="champ-mode-blanc">Quel mode est fait pour vous ?! <br>Découvrez votre niveau de Rock’Attitude !
-        </p>
-        <a style="position: relative;z-index: 2;color: #000000;background-color: #ffffff;margin: auto;" href="qintro.php" class="btn">Commencer le test</a>
-
-    </article>
 </section>
 <?php include("include/footerWhite.php") ?>
 
 
 </body>
-
 </html>

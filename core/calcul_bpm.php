@@ -1,7 +1,7 @@
 <?php
 include"../config/settings.php";
 
-$bpm = $_POST['clic']*6;
+$bpm = $_POST['clic'];
 
 $resultats = array();
 $resultatsc = array();
@@ -126,7 +126,11 @@ $deezer_url = "https://api.deezer.com/track/".$resultatFinal."?access_token=". $
 $response = json_decode(file_get_contents($deezer_url));
 $url = $response->{'preview'};
 
-
+if(empty($url)){
+    $deezer_url = "https://api.deezer.com/track/".$resultatFinal."?access_token=". $_SESSION['deezer_access_token2'];
+    $response = json_decode(file_get_contents($deezer_url));
+    $url = $response->{'preview'};
+}
 
 if(0 < $bpm AND $bpm < 101 ){
     $citation = $db->prepare('SELECT * FROM citation WHERE :a < bpm AND bpm < :i');

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - Quelle est votre niveau de Rock'Attitude ?</title>
+    <title>Pace Me - Connexion</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -16,10 +16,10 @@
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KPP7XMR');</script>
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KPP7XMR');</script>
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,48 +45,27 @@
 
     </script>
 </head>
-<body id="background-questionnaire">
+<body>
+<?php include("include/headerWhite.php") ?>
 
-<?php include("include/headerBlack.php") ?>
+<section id="page-connexion" class="container col-10">
+    <div class="trait"></div>
+    <h2>Les modes</h2>
 
+    <p style="width: auto">Choississez votre plateforme de musique</p>
 
-<section id="q2" class="container col-10">
-
-
-    <div class="etapes row">
-        <p href="q1.html" class="question q-1 active">1</p>
-        <div class="trait-q"></div>
-        <p href="q2.html" class="question q-2">2</p>
-        <div class="trait-q"></div>
-        <p href="q3.html" class="question q-3">3</p>
-        <div class="trait-q"></div>
-        <p href="q4.html" class="question q-4">4</p>
-        <div class="trait-q"></div>
-        <p href="q5.html" class="question q-5">5</p>
-        <div class="trait-q"></div>
-        <p href="qresult.html" class="question result">Résultat</p>
+    <div class="margin row">
+        <a href="deezer_auth_duo.php" class="musique-mode deezer"></a>
+        <p class="musique-mode spotify avenir"></p>
+        <p class="musique-mode youtube avenir"></p>
     </div>
 
 
-    <div class="trait"></div>
-    <h2>Vous êtes ?</h2>
 
-
-    <form action="q2.php" method="post">
-        <p class="align-input">
-            <input id="homme" type="radio" name="q1" value="homme">Un homme<br>
-            <label for="homme"></label>
-        </p>
-
-        <p class="align-input">
-            <input id="femme" type="radio" name="q1" value="femme">Une femme<br>
-            <label for="femme"></label>
-        </p>
-
-        <input type="submit" value="Suivant">
-    </form>
 
 </section>
+<?php include("include/footerWhite.php") ?>
+
 
 
 </body>

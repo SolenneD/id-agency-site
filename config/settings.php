@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 if($_SERVER['SERVER_NAME']== 'localhost') {
     define("SQL_HOST", "localhost");

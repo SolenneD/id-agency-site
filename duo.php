@@ -10,7 +10,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-120265874-1');
     </script>
 
@@ -32,20 +31,17 @@
 
     <!--analytics-->
     <script type="text/javascript">
-
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-120265874-1']);
         _gaq.push(['_trackEvent']);
-
         (function() {
             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-
     </script>
 </head>
-<body>
+<body class="point-bottom-gris">
 <?php include("include/headerWhite.php") ?>
 
 <section id="page-lesmodes" class="container col-10 row">
@@ -105,27 +101,7 @@
     </article>
 </section>
 
-<footer class="footer">
-
-    <div class="img-footer">
-        <img src="src/modes/footer-mode.svg">
-
-        <div class="rs-desktop">
-            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
-            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
-        </div>
-
-        <div class="rs-mobile">
-            <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
-            <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter fa-2x"></i></a>
-            <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud fa-2x"></i></a>
-        </div>
-    </div>
-
-</footer>
+<?php include("include/footerWhite.php") ?>
 
 
 </body>

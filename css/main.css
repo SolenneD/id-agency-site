@@ -68,15 +68,17 @@ body{
 .header{
 	height: 150px;
 }
-.footer{
+a{
+	text-decoration: none;
+}
+
+.footer-white{
 	width: 100%;
-	/*height: 50px;*/
+	height: 50px;
 	position: inherit;
 	z-index: -3;
 }
-.footer>.img-footer{
-	position: inherit;
-}
+
 .menu .logo{
 	display: inline;
 }
@@ -223,6 +225,33 @@ input:focus {
 }
 /*fin menu burger*/
 
+/*footer-img-body*/
+.vague-bottom{
+	background: url("../src/vague-footer.png") no-repeat bottom;
+	background-size: 100%;
+	width: 100%;
+	min-height: 100vh;
+}
+.vague-bottom-labague{
+	background: url("../src/labague-footer.svg") no-repeat bottom;
+	background-size: 100%;
+	width: 100%;
+	min-height: 100vh;
+}
+.vague-bottom-mode{
+	background: url("../src/modes/footer-mode.svg") no-repeat bottom;
+	background-size: 100%;
+	width: 100%;
+	min-height: 100vh;
+}
+.point-bottom-gris{
+	background: url("../src/modes/footer-mode.svg") no-repeat bottom;
+	background-size: 100%;
+	width: 100%;
+	min-height: 100vh;
+}
+
+
 .parallax {
 	/*!* The image used *!*/
 	/*background-image: url("../src/.jpg");*/
@@ -247,6 +276,13 @@ h2{
 	text-transform: uppercase;
 	line-height: 28px;
 	margin-bottom: 40px;
+}
+h3{
+	font-size: 16px;
+	width: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 30px;
 }
 p{
 	width: 420px;
@@ -297,18 +333,24 @@ p{
 .right{
 	float: right;
 }
-.img-footer {
-	width: 100%;
-	position: relative;
+.left{
+	float: left;
 }
-.img-footer img{
-	width: 100%;
-	position: absolute;
-	z-index: -1;
-	right: 0;
-	left: 0;
-	bottom: 0;
+
+.footer-white .partie-mention>a{
+	font-size: 12px;
+	text-decoration: none;
+	color: #000;
+	margin-right: 20px;
 }
+.footer-white .partie-mention{
+	margin-left: 20px;
+}
+.footer-white .partie-mention>a:hover{
+	text-decoration: underline;
+	color: #666666;
+}
+
 
 /****** PAGE HOME ********/
 #accueil{
@@ -319,17 +361,19 @@ p{
 	height: 100vh;
 	margin-bottom: 2%;
 }
-.courbe{
+.courbe {
 	position: absolute;
-	width: 100vw;
-	bottom: -53px;
-}
-.courbe_image{
+	bottom: 0;
 	width: 100%;
+}
+.courbe_image {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 .fas.fa-angle-down{
 	position: relative;
-	bottom: 50px;
+	bottom: 0px;
 	text-align: center;
 	display: flex;
 	width: 100%;
@@ -391,6 +435,40 @@ p{
 .concept-compatible{
 	margin-top: 35px;
 }
+
+#accueil .pulsate-fwd {
+	-webkit-animation: pulsate-fwd 1s ease-in-out infinite forwards;
+	animation: pulsate-fwd 1s ease-in-out infinite forwards;
+}
+@-webkit-keyframes pulsate-fwd {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes pulsate-fwd {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
 
 /****** PAGE CONTACT ********/
 section#page-contact {
@@ -595,10 +673,7 @@ form .align-input>a{
 /******** RS ***********/
 .rs-desktop{
 	float: right;
-	border-bottom: 10px;
 	margin-right: 35px;
-	position: absolute;
-	border-bottom: 10px;
 	right: 0;
 	bottom: 0;
 	margin-bottom: 15px;
@@ -1050,6 +1125,56 @@ a.test-mode{
 	background-image: url("../src/labague/autonomie.svg");
 }
 
+.btn-choix{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.btn-choix>.choix-bague + input{
+	width: auto;
+}
+
+input#choix-duo, input#choix-solo{
+	float: left;
+}
+.choix-de-bague{
+	margin: auto;
+	justify-content: space-around;
+	margin-bottom: 40px;
+}
+.choix-bague{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.choix-bague.solo{
+	background-size: contain;
+	background: url("../src/motiv-rings.png") no-repeat center;
+	margin-bottom: 30px;
+}
+.choix-bague.duo{
+	background-size: contain;
+	background: url("../src/motiv-rings.png") no-repeat center;
+	margin-bottom: 30px;
+}
+input[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 5px;
+	width: 6px;
+	height: 6px;
+	border-radius:50%;
+	transition: 0.2s all linear;
+	border: 3px solid #FFFFFF;
+	box-shadow: 0 0 1px 1px #303030;
+	margin-right: 15px;
+	position: relative;
+}
+input[type="radio"]:checked {
+	background-color:#000;
+	border: 3px solid #ffffff;
+}
+
 /*.bague-custom{*/
 	/*background-size: contain;*/
 	/*background: url("../src/motiv-rings.png") no-repeat center;*/
@@ -1111,17 +1236,23 @@ a.test-mode{
 	border: 3px solid #fff;
 	border-radius: 50%;
 	margin: auto auto 10px;
+	cursor: pointer;
 }
-#page-labague-custom .select.active-select{
+#page-labague-custom .select.active-select-ornement, #page-labague-custom .select.active-select-taille, #page-labague-custom .select.active-select-couleur{
 	box-shadow: 0 0 2px 1px #ccc;
-
 }
+#page-labague-custom .taille>div>a{
+	font-size: 12px;
+	text-align: center;
+	line-height: 25px;
+	background-color: #F2F2F2;
+}
+
 #page-labague-custom #noir{
 	background-color: #000000;
 }
 #page-labague-custom #blanc{
-	background-color: #FFFFFF;
-	border: 1px solid #cccccc;
+	background-color: #f8f8f8;
 }
 #page-labague-custom #anthracite{
 	background-color: #293133;
@@ -1134,13 +1265,21 @@ a.test-mode{
 }
 
 /*partager fb*/
-button#u_0_2{
+a.fb-xfbml-parse-ignore{
+	text-decoration: none;
+	color: #FFFFFF;
 	background-color: #666666;
 	border-radius: 100px;
-
+	padding: 7px 10px;
+	display: block;
+	width: 200px;
+	line-height: 25px;
+	cursor: pointer;
+	text-align: center;
+	margin: auto;
 }
-a#u_0_1{
-	background-color: #666666;
+a.fb-xfbml-parse-ignore:hover{
+	background-color: #C4C4C4;
 }
 
 /******* 404 ******/
@@ -1194,7 +1333,9 @@ a#u_0_1{
 
 /****** QUESTIONNAIRE ********/
 #background-questionnaire{
-	background-color: #000000;
+	background: url("../src/questionnaire/qintro.png") no-repeat bottom #000000;
+
+	min-height: 100vh;
 	height:100%;
 	position: inherit;
 }
@@ -1252,44 +1393,6 @@ a#u_0_1{
 	background-color:#fff;
 	border: 4px solid #000;
 }
-
-#q2 + footer>.img-footer{
-	position: relative;
-}
-#q2 + footer{
-	position: absolute;
-	bottom: 0;
-	width: 100vw;
-	z-index: -2;
-	background-size: cover;
-	background-repeat: no-repeat;
-
-}
-#q2 + footer.footer-qintro{
-	height: 450px;
-	background-image: url(../src/questionnaire/qintro.png);
-}
-#q2 + footer.footer-q1{
-	height: 450px;
-	background-image: url(../src/questionnaire/q1.png);
-}
-#q2 + footer.footer-q2{
-	height: 450px;
-	background-image: url(../src/questionnaire/q2.png);
-}
-#q2 + footer.footer-q3{
-	height: 450px;
-	background-image: url(../src/questionnaire/q3.png);
-}
-#q2 + footer.footer-q4{
-	height: 450px;
-	background-image: url(../src/questionnaire/q4.png);
-}
-#q2 + footer.footer-q5{
-	height: 450px;
-	background-image: url(../src/questionnaire/q5.png);
-}
-
 #q2>.etapes>.question{
 	border-radius: 50%;
 	padding: 5px;
@@ -1468,12 +1571,26 @@ progress::-webkit-progress-value {
 		background-attachment: scroll;
 	}
 
+	.active_header{
+		display: none;
+
+	}
+	.footer-white{
+		height: 80px;
+	}
+	.footer-white .partie-mention {
+		margin-left: 0px;
+		float: inherit;
+		text-align: center;
+	}
+
 	.rs-desktop {
 		display: none;
 	}
 	.rs-mobile {
 		display: block;
 		text-align: center;
+		margin-bottom: 20px;
 	}
 	.rs-mobile a{
 		margin-right: 25px;
@@ -1527,8 +1644,11 @@ progress::-webkit-progress-value {
 	.rond-bague{
 		width: 250px;
 		height: 250px;
-		position: relative;
+		position: inherit;
 		left: 150px;
+	}
+	.courbe_image, .js-scrollTo{
+		display: none;
 	}
 
 	/*page à propos*/
@@ -1680,7 +1800,7 @@ progress::-webkit-progress-value {
 		display: flex;
 	}
 	.bague-custom{
-		height: 200px;
+		height: auto;
 		background-size: contain;
 	}
 	.video{
@@ -1696,6 +1816,31 @@ progress::-webkit-progress-value {
 	}
 	.champ-mode-blanc{
 		font-size: 16px;
+	}
+
+	input[type="email"]{
+		width: 100%;
+		padding: 10px 0;
+	}
+	.bague-custom{
+		margin-bottom: 20px;
+	}
+	#page-labague-custom{
+		margin-bottom: 100px;
+	}
+	.choix-de-bague{
+		display: flex;
+	}
+	.choix-bague {
+		width: 110px;
+		height: 110px;
+		border-radius: 50%;
+	}
+	.btn-choix label{
+		font-size: 13px;
+	}
+	.btn-choix label input{
+		margin-right: 5px;
 	}
 
 

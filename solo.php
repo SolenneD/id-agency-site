@@ -1,9 +1,10 @@
 <?php
+session_start();
 include('config/settings.php');
 
-
 if(!isset($_SESSION['deezer_access_token'])){
-    redirect('deezer_auth.php');
+
+    redirect('deezer_auth.php?mode=solo');
 }
 
 ?><!DOCTYPE html>
@@ -37,7 +38,7 @@ if(!isset($_SESSION['deezer_access_token'])){
     <link rel="icon" type="image/png" href="src/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+    <script src="js/custom.js"></script>
     <!--analytics-->
     <script type="text/javascript">
 
@@ -113,7 +114,7 @@ if(!isset($_SESSION['deezer_access_token'])){
             <p class="champ-mode-blanc moyen-blanc">Duo</p>
             <p class="champ-mode-blanc petit-blanc">Laissez vos corps guider la musique...</p>
             </div>
-            <a href="#" class="test-mode mode-a-venir">À venir</a>
+            <a href="duo.php" class="test-mode">Tester</a>
         </article>
 
         <article class="champ-mode-petit">
@@ -149,31 +150,11 @@ if(!isset($_SESSION['deezer_access_token'])){
         </div>
         <p class="texte-solo" id="citation">Cliquez pendant 5 secondes sur le bouton et ...</p>
 
-        <embed src="" autoplay="1" loop="1" >
 
     </article>
 </section>
-<footer class="footer">
 
-    <div class="img-footer">
-        <img src="src/modes/footer-mode.svg">
-
-        <div class="rs-desktop">
-            <a onClick="_gaq.push(['_trackEvent', 'Facebook Home', 'Clic', 'Pace Me']);" title="Facebook Home" href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f"></i></a>
-            <a onClick="_gaq.push(['_trackEvent', 'Instagram Home', 'Clic', 'Pace Me']);" title="Instagram Home" href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram"></i></a>
-            <a onClick="_gaq.push(['_trackEvent', 'Twitter Home', 'Clic', 'Pace Me']);" title="Twitter Home" href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter"></i></a>
-            <a onClick="_gaq.push(['_trackEvent', 'Soundcloud Home', 'Clic', 'Pace Me']);" title="Soundcloud Home" href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud"></i></a>
-        </div>
-
-        <div class="rs-mobile">
-            <a onClick="_gaq.push(['_trackEvent', 'Facebook Home', 'Clic', 'Pace Me']);" title="Facebook Home" href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #000000" class="fab fa-facebook-f fa-2x"></i></a>
-            <a onClick="_gaq.push(['_trackEvent', 'Instagram Home', 'Clic', 'Pace Me']);" title="Instagram Home" href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #000000" class="fab fa-instagram fa-2x"></i></a>
-            <a onClick="_gaq.push(['_trackEvent', 'Twitter Home', 'Clic', 'Pace Me']);" title="Twitter Home" href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-twitter fa-2x"></i></a>
-            <a onClick="_gaq.push(['_trackEvent', 'Soundcloud Home', 'Clic', 'Pace Me']);" title="Soundcloud Home" href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #000000" class="fab fa-soundcloud fa-2x"></i></a>
-        </div>
-    </div>
-
-</footer>
+<?php include("include/footerWhite.php") ?>
 
 <script>
     $("#tap").click(function(e){

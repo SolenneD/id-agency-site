@@ -5,9 +5,9 @@ session_start();
 include('config/settings.php');
 
 
-$app_id      = "283624" ;
-$app_secret = "037bd04dc42173da70a724c6f5fdcd4f" ;
-$my_url      = "http://paceme.fr/deezer_auth.php" ;
+$app_id      = "285824" ;
+$app_secret = "f2e788afd7405bcd51b983299db4263d" ;
+$my_url      = "http://paceme.fr/deezer_auth_duo.php" ;
 //$my_url      = "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 
@@ -51,11 +51,10 @@ if($_REQUEST['state'] == $_SESSION['state']) {
     $api_url   = "https://api.deezer.com/user/me?access_token="
         .$params['access_token'];
 
-    $_SESSION['deezer_access_token'] = $params['access_token'];
+    $_SESSION['deezer_access_token2'] = $params['access_token'];
     $user = json_decode(file_get_contents($api_url));
     //echo("Hello " . $mode);
-    redirect('solo.php');
-
+    redirect('duo.php');
 
 }else{
     echo("The state does not match. You may be a victim of CSRF.");

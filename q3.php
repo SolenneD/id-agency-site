@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" href="src/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
+    <script src="js/custom.js"></script>
     <!--analytics-->
     <script type="text/javascript">
 
@@ -75,9 +75,10 @@
     <form action="q4.php" method="post">
         <input class="cache" hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
         <input class="cache" hidden type="text" name="q2" value="<?php echo $_POST['q2'] ?>">
+
         <p class="align-input">
-            <input id="introverti" type="radio" name="q3" value="introverti">Introverti<br>
-            <label for="introverti"></label>
+            <input id="sage" type="radio" name="q3" value="sage">Sage<br>
+            <label for="sage"></label>
         </p>
 
         <p class="align-input">
@@ -90,29 +91,25 @@
             <label for="malicieux"></label>
         </p>
 
+        <p class="align-input">
+            <input id="curieux" type="radio" name="q3" value="curieux">Curieux<br>
+            <label for="curieux"></label>
+        </p>
+
+        <p class="align-input">
+            <input id="rebel" type="radio" name="q3" value="rebel">Rebel<br>
+            <label for="rebel"></label>
+        </p>
+
+        <p class="align-input">
+            <input id="timide" type="radio" name="q3" value="timide">Timide<br>
+            <label for="timide"></label>
+        </p>
+
         <input type="submit" value="Suivant">
     </form>
 
 </section>
-<footer class="footer footer-q3">
-
-
-    <div class="rs-desktop">
-        <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter"></i></a>
-        <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud"></i></a>
-    </div>
-
-    <div class="rs-mobile">
-        <a href="https://www.facebook.com/pacemerock/" target="_blank"><i style="color: #ffffff" class="fab fa-facebook-f fa-2x"></i></a>
-        <a href="https://www.instagram.com/paceme_rock/" target="_blank"><i style="color: #ffffff" class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://twitter.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-twitter fa-2x"></i></a>
-        <a href="https://soundcloud.com/paceme_rock" target="_blank"><i style="color: #ffffff" class="fab fa-soundcloud fa-2x"></i></a>
-    </div>
-
-
-</footer>
 
 
 
