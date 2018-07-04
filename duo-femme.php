@@ -104,7 +104,7 @@ if(!isset($_SESSION['deezer_access_token'])){
 
     <section id="page-lesmodes" class="container col-10 row">
     <article class="col-4">
-        <div class="trait"></div>
+        <div id="trait" class="trait"></div>
         <h2>Les Modes</h2>
 
         <article class="champ-mode-petit">

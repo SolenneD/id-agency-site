@@ -50,8 +50,8 @@
 <div class="wrapper-propos">
 <section id="page-apropos" class="container col-10 row">
     <article class="col-6">
-        <div class="trait"></div>
-        <h2>À PROPOS DE NOUS</h2>
+        <div id="trait" class="trait"></div>
+        <h2>À propos de nous</h2>
         <p>Coupé en plein acte charnel à cause d’une publicité spontanée, Richard a trouvé très drôle de nous raconter cette anecdote autour de notre verre habituel du jeudi soir. Si au début tout le monde en a plaisanté, nous étions finalement content de ne pas avoir été à sa place.</p>
         <p>Qui n’a jamais rêvé d’avoir l’atmosphère parfaite pendant son rapport sexuel ?</p>
         <p>C’est de là que l’idée Pace Me à été créée, portée par un groupe d’amis d’enfance, ayant envie de fusionner leur passion pour le rock et leurs plaisirs charnels.</p>

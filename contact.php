@@ -52,7 +52,7 @@
 <div class="wrapper-plan">
 <section id="page-contact" class="container col-10">
     <section id="contact">
-        <div class="trait"></div>
+        <div id="trait" class="trait"></div>
         <h2>Nous Contacter</h2>
         <p>Une soudaine envie de mieux nous connaître...</p>
         <p>N’hésitez pas, nous sommes ici pour vous satisfaire !</p>

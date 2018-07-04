@@ -176,7 +176,7 @@ $_SESSION['redirect'] = $data['lien'];
     </div>
 
 
-    <div class="trait"></div>
+    <div id="trait" class="trait"></div>
     <h2>Vous êtes comme <span><?= $data['rockeur'] ?></span></h2>
 
     <article class="col-6 left">

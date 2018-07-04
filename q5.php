@@ -68,7 +68,7 @@
     </div>
 
 
-    <div class="trait"></div>
+    <div id="trait" class="trait"></div>
     <h2>Et pour conclure, quel genre vous fait vibrer ?</h2>
 
 

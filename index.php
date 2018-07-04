@@ -16,10 +16,10 @@
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KPP7XMR');</script>
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KPP7XMR');</script>
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,35 +47,40 @@
     </script>
 </head>
 <body class="vague-bottom-propos">
-    <header>
-        <h1 class="logo">
-            <a href="http://www.paceme.fr/">
-                <img src="src/logo-blanc/logo-desktop-blanc.png" alt="logo-paceme" class="desktop">
-                <img src="src/logo-blanc/logo-tablette-blanc.png" alt="logo-paceme" class="tablette">
-                <img src="src/logo-blanc/logo-mobile-blanc.png" alt="logo-paceme" class="mobile">
-            </a>
-        </h1>
-        <div class="menu blanc">
-            <nav role="navigation" id="burger">
-                <div id="menuToggle">
-                    <input id="btn-header" type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <div class="active_header" id="menu">
-                        <a href="index.php">Home</a>
-                        <a href="labague.php">La Bague</a>
-                        <a href="connexion.php?mode=solo">Les Modes</a>
-                        <a href="propos-nous.php">À propos</a>
-                        <a href="contact.php">Contact</a>
-                        <a href="src/kit-presse/kit-presse.zip" download="kit-presse">Kit Presse</a>
-                    </div>
+
+<header>
+    <h1 class="logo">
+        <a href="http://www.paceme.fr/">
+            <img src="src/logo-blanc/logo-desktop-blanc.png" alt="logo-paceme" class="desktop">
+            <img src="src/logo-blanc/logo-tablette-blanc.png" alt="logo-paceme" class="tablette">
+            <img src="src/logo-blanc/logo-mobile-blanc.png" alt="logo-paceme" class="mobile">
+        </a>
+    </h1>
+    <div class="menu blanc">
+        <nav role="navigation" id="burger">
+            <div id="menuToggle">
+                <input id="btn-header" type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="active_header" id="menu">
+                    <a href="index.php">Home</a>
+                    <a href="labague.php">La Bague</a>
+                    <a href="connexion.php?mode=solo">Les Modes</a>
+                    <a href="propos-nous.php">À propos</a>
+                    <a href="contact.php">Contact</a>
+                    <a href="src/kit-presse/kit-presse.zip" download="kit-presse">Kit Presse</a>
                 </div>
-            </nav>
-        </div>
-    </header>
-    <div class="wrapper-propos">
-    <!--video futur arriere plan-->
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="wrapper-propos">
+
+    <div id='stars2'></div>
+
+
     <section id="accueil">
         <div class="title-home">
             <h1 class="title-accueil">Pace Me, enfilez moi…</h1>
@@ -90,16 +95,17 @@
 
 
     </section>
-    <div class="parallax"></div>
+
     <!--notre concept-->
     <section id="notre-concept" class="container col-10 row">
+
         <article class="col-6">
             <div class="rond-myapp"><div class="app"></div></div>
         </article>
         <article class="col-6">
             <div class="right">
 
-                <div class="trait"></div>
+                <div id="trait" class="trait"></div>
                 <h2>Notre Concept</h2>
                 <p>Marre de Céline Dion en plein orgasme ? Glissez dans l’univers de Pace Me…
                     Découvrez l’application* qui adapte le rock’n’roll à votre rythme cardiaque à travers plusieurs modes de jeux.</p>
@@ -112,14 +118,14 @@
             </div>
         </article>
     </section>
-    <div class="parallax"></div>
     <section id="notre-bague" class="container col-10 row">
+
         <article class="col-6">
             <div class="right">
-                <div class="trait"></div>
+                <div id="trait2" class="trait"></div>
                 <h2>La Bague</h2>
                 <p>Pulpeuse et sensuelle, ses courbes s’accorderont à votre doigté. Créez la bague parfaite à votre image pour atteindre le nirvana.</p>
-<!--            <a id="lien-bague" href="labague.php" class="btn">POSSÉDEZ-MOI</a>-->
+                <a id="lien-bague" href="labague.php" class="btn">POSSÉDEZ-MOI</a>
             </div>
         </article>
         <article class="col-6">
@@ -130,27 +136,27 @@
     </section>
     <div class="onde-noir"></div>
 
-        <div class="push"></div>
-    </div>
+    <div class="push"></div>
+</div>
 
 
-    <?php include("include/footerWhite.php") ?>
+<?php include("include/footerWhite.php") ?>
 
-    <script>
-        var pageTracker = _gat._getTracker('UA-120265874-1');
-        pageTracker._trackPageview();
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.js-scrollTo').on('click', function() { // Au clic sur un élément
-                var page = $(this).attr('href'); // Page cible
-                var speed = 750; // Durée de l'animation (en ms)
-                $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-                return false;
-            });
+<script>
+    var pageTracker = _gat._getTracker('UA-120265874-1');
+    pageTracker._trackPageview();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.js-scrollTo').on('click', function() { // Au clic sur un élément
+            var page = $(this).attr('href'); // Page cible
+            var speed = 750; // Durée de l'animation (en ms)
+            $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+            return false;
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>

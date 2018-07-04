@@ -79,7 +79,7 @@ $bague->execute();
     <div class="labague"></div>
     <section id="page-labague" class="container col-10">
         <article>
-            <div class="trait"></div>
+            <div id="trait" class="trait"></div>
             <h2>La bague</h2>
 
             <video controls autoplay loop muted width="700">
@@ -117,7 +117,7 @@ $bague->execute();
     </section>
     <section id="page-labague-custom" class="container col-10">
         <article class="col-10 clear">
-            <div class="trait"></div>
+            <div id="trait2" class="trait"></div>
             <h2>Personnalisez votre bague</h2>
         </article>
         <div class="row custom">
@@ -209,7 +209,7 @@ $bague->execute();
     <section id="page-labague-mode" class="container col-10">
         <article id="champ-mode">
             <p class="champ-mode-blanc">Quel mode de jeu est fait pour vous ?</p>
-            <a href="qintro.php" class="btn btn-test">Explorez-vous</a>
+            <a href="q1.php" class="btn btn-test">Explorez-vous</a>
 
         </article>
     </section>

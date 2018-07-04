@@ -6,4 +6,13 @@ $(function(){
             $('#menu').addClass('active_header');
         }
     });
+
+
 });
+window.onload = function () {
+
+    document.getElementById("trait").style.width = "50px";
+    document.getElementById("trait2").style.width = "50px";
+
+
+};

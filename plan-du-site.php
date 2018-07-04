@@ -49,7 +49,7 @@
 <?php include("include/headerWhite.php") ?>
 <div class="wrapper-plan">
 <section id="page-plandusite" class="container col-10">
-    <div class="trait"></div>
+    <div id="trait" class="trait"></div>
     <h2>Plan du site</h2>
     <div class="center-hv">
         <a href="index.php">Home</a>

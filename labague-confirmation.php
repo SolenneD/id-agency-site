@@ -83,7 +83,7 @@ $datas = $custom->fetch(PDO::FETCH_ASSOC);
 
     <section id="page-labague-custom" class="container col-10">
         <article class="col-10 clear">
-            <div class="trait"></div>
+            <div id="trait" class="trait"></div>
             <h2>Confirmation</h2>
         </article>
         <div class="row">

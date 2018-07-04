@@ -55,7 +55,7 @@ if(isset($_SESSION['deezer_access_token'])){
 <?php include("include/headerWhite.php") ?>
 <div class="wrapper-mode">
     <section id="page-connexion" class="container col-10">
-        <div class="trait"></div>
+        <div id="trait" class="trait"></div>
         <h2>Les modes</h2>
         <div class="container row">
             <div class="col-8">

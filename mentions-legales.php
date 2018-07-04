@@ -49,7 +49,7 @@
 <?php include("include/headerWhite.php") ?>
 <div class="wrapper-plan">
     <section id="page-mentionslegales" class="container col-10">
-    <div class="trait"></div>
+    <div id="trait" class="trait"></div>
     <h1>Mentions Légales</h1><br>
 
     <h2>Définitions</h2>

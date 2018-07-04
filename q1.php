@@ -66,7 +66,7 @@
     </div>
 
 
-    <div class="trait"></div>
+    <div id="trait" class="trait"></div>
     <h2>Vous êtes ?</h2>
 
 

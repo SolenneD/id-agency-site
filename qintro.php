@@ -50,7 +50,7 @@
 <div class="wrapper-q">
 
     <section id="q2" class="container col-10">
-        <div class="trait"></div>
+        <div id="trait" class="trait"></div>
         <h2>Quelle est votre niveau de Rock'Attitude ?</h2>
 
         <p class="center-text">Découvrez quelle fonctionnalité est faite pour vous ! </p>

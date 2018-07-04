@@ -351,6 +351,7 @@ input:focus {
 }
 #notre-concept{
 	height: auto;
+	margin-bottom: 12%;
 }
 #notre-bague{
 	margin-bottom: 100px;
@@ -407,11 +408,46 @@ p{
 .trait{
 	content: '';
 	display: block;
-	width: 50px;
+	width: 0;
 	margin-bottom: 20px;
 	background: #000000;
 	height: 4px;
 	border-radius: 5px;
+	transition-delay: 0.3s;
+	transition: width 0.3s;
+}
+.trait2{
+	content: '';
+	display: block;
+	width: 0;
+	margin-bottom: 20px;
+	background: #000000;
+	height: 4px;
+	border-radius: 5px;
+	transition-delay: 0.3s;
+	transition: width 0.3s;
+}
+#trait{
+	content: '';
+	display: block;
+	width: 0;
+	margin-bottom: 20px;
+	background: #000000;
+	height: 4px;
+	border-radius: 5px;
+	transition-delay: 0.8s;
+	transition: width 0.8s;
+}
+#trait2{
+	content: '';
+	display: block;
+	width: 0;
+	margin-bottom: 20px;
+	background: #000000;
+	height: 4px;
+	border-radius: 5px;
+	transition-delay: 0.8s;
+	transition: width 0.8s;
 }
 .right{
 	float: right;
@@ -442,7 +478,7 @@ p{
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
-	margin-bottom: 2%;
+	margin-bottom: 7%;
 }
 .description-index{
 	color: #FFF;
@@ -547,10 +583,39 @@ p{
 	width: 620px;
 }
 
-/*#lien-bague{*/
-	/*position: relative;*/
-	/*z-index: 2;*/
-/*}*/
+#stars2 {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	border-radius: 50%;
+	z-index: -10;
+	background: transparent;
+	box-shadow: 1483px 1416px #ccc , 591px 1061px #ccc , 670px 1693px #ccc , 790px 1615px #ccc , 1243px 474px #ccc , 1691px 101px #ccc , 1953px 252px #ccc , 1681px 1988px #ccc , 77px 1569px #ccc , 776px 732px #ccc, 77px 2239px #ccc;
+	animation: animStar 30s linear infinite;
+}
+#stars2:after {
+	content: " ";
+	position: absolute;
+	border-radius: 50%;
+	z-index: -10;
+	top: 100px;
+	width: 42px;
+	height: 42px;
+	background: transparent;
+	box-shadow: 1483px 1416px #ccc, 1953px 252px #ccc , 1681px 1988px #ccc , 77px 1569px #ccc , 776px 732px #ccc , 1387px 665px #ccc, 77px 2239px #ccc, 107px 239px #ccc, 507px 2339px #ccc, 807px 1339px #ccc;
+}
+.rond-bague{
+	-webkit-filter: drop-shadow(0px 8px 4px #ccc);
+	filter: drop-shadow(0px 8px 4px #ccc);
+}
+@keyframes animStar {
+	from {
+		transform: translateY(0px);
+	}
+	to {
+		transform: translateY(-2000px);
+	}
+}
 
 #accueil .pulsate-fwd {
 	-webkit-animation: pulsate-fwd 1s ease-in-out infinite forwards;
@@ -672,9 +737,9 @@ form .align-input>a{
 }
 
 /****** PAGE A PROPOS NOUS ********/
-/*#page-apropos{*/
-	/*margin-bottom: 10%;*/
-/*}*/
+#page-apropos .col-6.row{
+	margin-bottom: 50px;
+}
 .photo-1{
 	background-image: url(../src/nous/1.png);
 }
