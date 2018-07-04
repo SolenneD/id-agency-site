@@ -1,4 +1,5 @@
 <?php
+include('../config/settings.php');
 
 
 if(empty($_POST))
@@ -35,12 +36,6 @@ else{
     }
 
 
-
-
-
-
-
-
 //-----------------------------------------------
 //DECLARE LES VARIABLES
 //-----------------------------------------------
@@ -48,6 +43,7 @@ else{
 $expediteur = $_POST['name'];
 $email_expediteur = $_POST['email'];
 $message = $_POST['message'];
+$newsletter = $_POST['newsletter'];
 $sujet = 'Nouveau message sur le site www.paceme.fr';
 
 
@@ -56,7 +52,7 @@ $message_texte='Bonjour. '.$expediteur.' vous a envoyé un message : "'.$message
 
 $message_html='<html> 
      <head> 
-     <title>Message provenant du site www.Hugodecraene.fr</title> 
+     <title>Message provenant du site www.paceme.fr</title> 
      </head> 
      <body>
      	<p>Bonjour.</p>
@@ -67,7 +63,7 @@ $message_html='<html>
      	
      	<p>Adresse de réponse : '.$email_expediteur.'</p>
      	
-        
+        <p>Inscrit à la newsletter : '.$newsletter.'</p>
      	
      </body> 
      </html>';
@@ -112,6 +108,8 @@ mail($destinataire,$sujet,$message,$headers);
 
 
 
-header('Location: contact.php');
+
+
+header('Location: ../contact.php');
 
 }

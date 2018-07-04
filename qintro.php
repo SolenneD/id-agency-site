@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - Quelle est votre niveau de Rock'Attitude ?</title>
+    <title>Pace Me - Quel est votre niveau de Rock'Attitude ?</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -23,7 +23,7 @@
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
+    <meta name="description" content="Découvrez votre niveau de Rock'Attitude et de Sex'Attitude !">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="src/favicon.png" />
@@ -45,19 +45,22 @@
 
     </script>
 </head>
-<body id="background-questionnaire">
-
+<body class="vague-bottom-q" id="background-questionnaire">
 <?php include("include/headerBlack.php") ?>
+<div class="wrapper-q">
 
-<section id="q2" class="container col-10">
-    <div class="trait"></div>
-    <h2>Quelle est votre niveau de Rock'Attitude ?</h2>
+    <section id="q2" class="container col-10">
+        <div class="trait"></div>
+        <h2>Quelle est votre niveau de Rock'Attitude ?</h2>
 
-    <p class="center-text">Découvrez quelle fonctionnalité est faite pour vous ! </p>
+        <p class="center-text">Découvrez quelle fonctionnalité est faite pour vous ! </p>
 
-    <a href="q1.php" class="btn-question">Commencer le test</a>
+        <a href="q1.php" class="btn-question">Commencer le test</a>
 
 
-</section>
+    </section>
+    <div class="push"></div>
+
+</div>
 </body>
 </html>

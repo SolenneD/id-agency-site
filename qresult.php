@@ -2,6 +2,7 @@
 
 include"config/settings.php";
 
+
 $resultat = 0;
 $sexe = 0;
 
@@ -14,6 +15,9 @@ if($_POST['q2'] == "couple"){
     $resultat = $resultat + 1;
 }
 if($_POST['q2'] == "libre"){
+    $resultat = $resultat + 3;
+}
+if($_POST['q2'] == "conquete"){
     $resultat = $resultat + 3;
 }
 
@@ -32,17 +36,39 @@ if($_POST['q3'] == "rebel"){
 }
 
 
-if($_POST['q4'] == "conquetes"){
+if(isset($_POST['q4A'])){
     $resultat = $resultat + 1;
 }
-if($_POST['q4'] == "libertins"){
-    $resultat = $resultat + 3;
+if(isset($_POST['q4B'])){
+    $resultat = $resultat + 1;
+}
+if(isset($_POST['q4C'])){
+    $resultat = $resultat + 1;
+}
+if(isset($_POST['q4D'])){
+    $resultat = $resultat + 1;
+}
+if(isset($_POST['q4E'])){
+    $resultat = $resultat + 1;
+}
+if(isset($_POST['q4F'])){
+    $resultat = $resultat + 1;
+}
+if(isset($_POST['q4G'])){
+    $resultat = $resultat + 1;
+}
+if(isset($_POST['q4H'])){
+    $resultat = $resultat + 1;
+}
+if(isset($_POST['q4I'])){
+    $resultat = $resultat + 1;
 }
 
 $zero = 0;
 $six = 6;
 $cinq = 5;
 $sept = 7;
+$six = 6;
 $huit = 8;
 
 if($resultat == 0){
@@ -68,20 +94,23 @@ if(5 < $resultat && $resultat < 7){
     $horoscope->execute();
     $data = $horoscope->fetch(PDO::FETCH_ASSOC);
 }
-if($resultat > 8){
+if($resultat > 6){
     $rockeur = "Beatles";
     $horoscope = $db->prepare('SELECT * FROM horoscope WHERE score > :i');
-    $horoscope->bindParam(':i', $huit, PDO::PARAM_STR);
+    $horoscope->bindParam(':i', $six, PDO::PARAM_STR);
     $horoscope->execute();
     $data = $horoscope->fetch(PDO::FETCH_ASSOC);
 }
+
+session_start();
+$_SESSION['redirect'] = $data['lien'];
 
 
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - Quelle est votre niveau de Rock'Attitude ?</title>
+    <title>Pace Me - Quel est votre niveau de Rock'Attitude ?</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -95,15 +124,16 @@ if($resultat > 8){
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KPP7XMR');</script>
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KPP7XMR');</script>
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
+    <meta name="description" content="Découvrez votre niveau de Rock'Attitude et de Sex'Attitude !">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="src/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
@@ -147,30 +177,21 @@ if($resultat > 8){
 
 
     <div class="trait"></div>
-    <h2>Votre rock’attitude</h2>
+    <h2>Vous êtes comme <span><?= $data['rockeur'] ?></span></h2>
 
-    <article class="col-6" style="float: left">
+    <article class="col-6 left">
 
-        <div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progressrock'] ?>" max="100"></progress>
+        <div id="test" class="bar-progress">
+            <progress id="rockProgress" class="avancement" value="0" max="100"></progress>
             <span class="theme">Rock’Attitude</span>
         </div>
-        <!--<div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progresssonore'] ?>" max="100"></progress>
-            <span class="theme">Puissance sonore</span>
-        </div>
-        <div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progressbpm'] ?>" max="100"></progress>
-            <span class="theme">BPM</span>
-        </div> -->
-        <div class="bar-progress">
-            <progress class="avancement" value="<?= $data['progresssexualite'] ?>" max="100"></progress>
+        <div  class="bar-progress">
+            <progress id="sexProgress" class="avancement" value="0" max="100"></progress>
             <span class="theme">Sex'Attitude</span>
         </div>
 
     </article>
-    <article class="col-6 rockattitude" style="float: right">
-        <h4>Vous ressemblez à <span><?= $data['rockeur'] ?></span></h4>
+    <article class="col-6 rockattitude right">
         <p><?= $data['texte'] ?></p>
 
     </article>
@@ -178,17 +199,32 @@ if($resultat > 8){
     <div class="clear"></div>
 
     <div class="col-10 container">
-        <p>Le mode <span><?= $data['mode'] ?></span> est donc fait pour vous ! </p>
-        <a onClick="_gaq.push(['_trackEvent', 'Lien Modes Questionnaire', 'Clic', 'Pace Me']);" title="Lien Modes Questionnaire" href="<?= $data['lien'] ?>?mode=<?php echo $data['mode'] ?>">Tester</a>
+        <p class="pcenter">Le mode <span><?= $data['mode'] ?></span> est donc fait pour vous ! </p>
+
+        <form action="core/mode-mail.php" method="post">
+
+            <p class="container"><input required type="email" name="email" id="email" placeholder="Adresse email"></p>
+
+            <input onClick="_gaq.push(['_trackEvent', 'Lien Modes Questionnaire', 'Clic', 'Pace Me']);" title="Lien Modes Questionnaire" class="btn-question" type="submit" name="envoi" value="Guidez-Moi">
+
+        </form>
+
     </div>
 
 
 </section>
-
 <script>
-    var pageTracker = _gat._getTracker('UA-120265874-1');
-    pageTracker._trackPageview();
+
+    window.onload = function () {
+        $('#rockProgress').val("<?php echo $data['progressrock'] ?>");
+        // $('#rockProgress').val(50);
+        $('#sexProgress').val("<?php echo $data['progresssexualite']?>");
+        // $('#sexProgress').val(70);
+    };
 </script>
+
+
+
 
 </body>
 </html>

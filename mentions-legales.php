@@ -45,10 +45,10 @@
 
     </script>
 </head>
-<body>
+<body class="footer-body">
 <?php include("include/headerWhite.php") ?>
-
-<section id="page-mentionslegales" class="container col-10">
+<div class="wrapper-plan">
+    <section id="page-mentionslegales" class="container col-10">
     <div class="trait"></div>
     <h1>Mentions Légales</h1><br>
 
@@ -236,8 +236,45 @@
     10. Droit applicable et attribution de juridiction.
     Tout litige en relation avec l’utilisation du site <a href="http://www.paceme.fr/">http://www.paceme.fr/</a> est soumis au droit français.
     En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris</p>
-</section>
 
+    <h2>10. Protection des données personnelles</h2>
+
+        <p>Les données sont celles des personnes physiques, qui sont « identifiées ou identifiables ». Autrement dit « une personne physique qui peut être identifiée, directement ou indirectement, notamment par référence à un identifiant, tel qu'un nom, un numéro d'identification, des données de localisation, un identifiant en ligne, ou à un ou plusieurs éléments spécifiques propres à son identité physique, physiologique, génétique, psychique, économique, culturelle ou sociale »</p>
+        <p>Toute personne qui collecte des données à caractère personnelles, autrement dit, n’importe quel type de donnée concernant une personne (mail, nom, adresse IP…) dans un fichier excel, sur un carnet ou dans un site d’emailing est concernée. Toute personne morale dont le siège social se trouve dans l’UE, ou qui ciblent des personnes résidant dans l’UE est concernée.
+        </p>
+        <p><a href="http://www.paceme.fr/">http://www.paceme.fr/</a> est susceptible de récuperer les données de l’Utilisateur lors de son utilisation de l’application.</p>
+            <p><a href="http://www.paceme.fr/">http://www.paceme.fr/</a> récupère en outre les données du type nom, prénom, adresse mail, âge, sexe, goûts musicaux et le rythme des battements du coeur de l’Utilisateur lors de l’utilisation de l’application.</p>
+
+        <p>Ces informations permettent à <a href="http://www.paceme.fr/">http://www.paceme.fr/</a> d’améliorer le contenu musical diffusé par son application pour le compte de l’Utilisateur.</p>
+        <p><a href="http://www.paceme.fr/" >http://www.paceme.fr/</a> respecte les dispositions obligatoires suivantes prévues par le RGPD en son article 13 :</p>
+
+
+    <ul>
+        <li>Les coordonnées du responsable du traitement et, le cas échéant, celles du représentant du responsable du traitement ou le cas échéant, les coordonnées du délégué à la protection des données ;</li>
+        <li>Les finalités du traitement auquel sont destinées les données à caractère personnel ;</li>
+        <li>La base juridique du traitement ; (consentement de nature contractuel, ou pour les intérêts vitaux de la personne, dans le cadre d’une mission de service public, pour la poursuite d’un intérêt légitime)</li>
+        <li>Les intérêts légitimes poursuivis par le responsable du traitement ou par un tiers lorsque ces intérêts légitimes sont la condition de licéité du traitement ; (pour des intérêts économiques, statistiques etc..)</li>
+        <li>Le fait que le responsable de traitement a l’intention d’effectuer un transfert de données à caractère personnel vers un pays tiers ;</li>
+        <li>Le cas échéant, l’existence ou l’absence d’une décision d’adéquation rendue par la CNIL, la référence aux garanties appropriées ou adaptées et les moyens d’en obtenir une copie ou l’endroit où elles ont été mises à disposition ; (car normalement, il faut que le pays où est effectué la cession présente le même niveau de protection des données que l’UE)</li>
+        <li>La durée de conservation des données à caractère personnel ou, lorsque ce n’est pas possible, les critères utilisés pour déterminer cette durée ;</li>
+        <li>Lorsque le traitement est fondé sur le consentement de la personne concernée, l’existence du droit de retirer son consentement à tout moment, sans porter atteinte à la licéité du traitement fondé sur le consentement effectué avant le retrait de celui-ci ;</li>
+        <li>Le droit d’introduire une réclamation auprès d’une autorité de contrôle ;</li>
+        <li>Des informations sur la question de savoir si l’exigence de fourniture de données à caractère personnel a un caractère réglementaire ou contractuel ou si elle conditionne la conclusion d’un contrat et si la personne concernée est tenue de fournir les données à caractère personnel, ainsi que sur les conséquences éventuelles de la non-fourniture de ces données ;</li>
+        <li>L’existence d’une prise de décision automatisée, y compris un profilage et, au moins en pareil cas, des informations utiles concernant la logique sous-jacente, ainsi que l’importance et les conséquences prévues de ce traitement pour la personne concernée.</li>
+
+    </ul>
+
+
+        <p>A tout moment, l’utilisateur peut exiger le droit de demander au responsable du traitement l’accès aux données à caractère personnel, la rectification ou l’effacement de celles-ci, ou une limitation du traitement relatif à la personne concernée, ou du droit de s’opposer au traitement et du droit à la portabilité des données.</p>
+
+        <p>L'article 14 du RGPD prévoit également que si les données sont transmises à des tiers, il faut également informer la personne faisant l'objet du traitement de l'identité sociale de la personne pour le compte de laquelle la collecte est réalisée.</p>
+
+
+
+    </section>
+    <div class="push"></div>
+
+</div>
 <?php include("include/footerWhite.php") ?>
 
 

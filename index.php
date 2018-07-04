@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - Laissez votre corps guider la musique</title>
+    <title>Pace Me - Laissez votre corps guider la musique</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -46,7 +46,7 @@
 
     </script>
 </head>
-<body class="vague-bottom">
+<body class="vague-bottom-propos">
     <header>
         <h1 class="logo">
             <a href="http://www.paceme.fr/">
@@ -64,26 +64,28 @@
                     <span></span>
                     <div class="active_header" id="menu">
                         <a href="index.php">Home</a>
-<!--                        <a href="labague.php">La Bague</a>-->
+                        <a href="labague.php">La Bague</a>
                         <a href="connexion.php?mode=solo">Les Modes</a>
                         <a href="propos-nous.php">À propos</a>
                         <a href="contact.php">Contact</a>
-                        <a href="mentions-legales.php">Mentions Légales</a>
+                        <a href="src/kit-presse/kit-presse.zip" download="kit-presse">Kit Presse</a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
+    <div class="wrapper-propos">
     <!--video futur arriere plan-->
     <section id="accueil">
         <div class="title-home">
-            <p class="title-accueil">Découvrez votre niveau de Rock’Attitude !</p>
-            <a onClick="_gaq.push(['_trackEvent', 'Test Questionnaire', 'Clic', 'Pace Me']);" title="Test Home Page" href="qintro.php" class="btn btn-question">Commencer le test</a>
+            <h1 class="title-accueil">Pace Me, enfilez moi…</h1>
+            <p class="description-index">Découvrez la bague connectée qui synchronise la musique à votre rythme lors de vos rapports charnels.</p>
+            <a onClick="_gaq.push(['_trackEvent', 'Test Questionnaire', 'Clic', 'Pace Me']);" title="Test Home Page" href="q1.php" class="btn btn-question">Explorez-vous</a>
         </div>
 
         <div class="courbe">
             <img src="src/vector-accueil.png" alt="bague" class="courbe_image">
-            <a class="js-scrollTo" href="#notre-concept"><i class="pulsate-fwd fas fa-angle-down fa-2x" style="color: #000000"></i></a>
+            <a class="js-scrollTo" href="#notre-concept"><i class="pulsate-fwd fas fa-angle-down fa-2x"></i></a>
         </div>
 
 
@@ -92,42 +94,46 @@
     <!--notre concept-->
     <section id="notre-concept" class="container col-10 row">
         <article class="col-6">
-            <div class="rond-myapp" style="background-image: url(src/onde-points.png);">
-    </div>
+            <div class="rond-myapp"><div class="app"></div></div>
         </article>
         <article class="col-6">
             <div class="right">
 
                 <div class="trait"></div>
                 <h2>Notre Concept</h2>
-                <p>Pace Me synchronise la musique à votre rythme cardiaque pendant l’acte sexuel. Laissez notre application gérer la musique.</p>
-                <a onClick="_gaq.push(['_trackEvent', 'Vers les Modes', 'Clic', 'Pace Me']);" title="Modes Home Page" href="duo.php" class="btn">Vers les modes</a>
+                <p>Marre de Céline Dion en plein orgasme ? Glissez dans l’univers de Pace Me…
+                    Découvrez l’application* qui adapte le rock’n’roll à votre rythme cardiaque à travers plusieurs modes de jeux.</p>
+                <a onClick="_gaq.push(['_trackEvent', 'Vers les Modes', 'Clic', 'Pace Me']);" title="Modes Home Page" href="solo.php" class="btn">MONTREZ-MOI</a>
                 <div class="concept-compatible">
-                    <p>* Compatible avec : Applewatch, Fitbit, Samsung watch, Huawei watch.</p>
-                    <p>* Se connecter avec son compte Deezer et Spotify</p>
+                    <p>* Compatible avec : Applewatch, Fitbit, Samsung watch, Huawei watch.<br>
+                        Se connecter avec son compte Deezer et Spotify</p>
                 </div>
 
             </div>
         </article>
     </section>
     <div class="parallax"></div>
-    <section id="notre-bague" class="container col-10 row" style="margin-bottom: 0">
-        <article style="margin-right: 3%" class="col-6">
+    <section id="notre-bague" class="container col-10 row">
+        <article class="col-6">
             <div class="right">
                 <div class="trait"></div>
                 <h2>La Bague</h2>
-                <p>Cette bague connectée récupère vos pulsations cardiaque afin que la musique se synchronise à votre rythme.</p>
-<!--                <a style="position: relative;z-index: 2;" href="labague.php" class="btn">Découvrez la bague</a>-->
+                <p>Pulpeuse et sensuelle, ses courbes s’accorderont à votre doigté. Créez la bague parfaite à votre image pour atteindre le nirvana.</p>
+<!--            <a id="lien-bague" href="labague.php" class="btn">POSSÉDEZ-MOI</a>-->
             </div>
         </article>
         <article class="col-6">
             <div class="rond-bague">
             </div>
         </article>
+
     </section>
-    <div class="parallax"></div>
-    <!--<img  src="src/onde-points-noir.png">-->
     <div class="onde-noir"></div>
+
+        <div class="push"></div>
+    </div>
+
+
     <?php include("include/footerWhite.php") ?>
 
     <script>

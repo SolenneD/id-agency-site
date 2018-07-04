@@ -51,7 +51,7 @@ if($_REQUEST['state'] == $_SESSION['state']) {
     $api_url   = "https://api.deezer.com/user/me?access_token="
         .$params['access_token'];
 
-    $_SESSION['deezer_access_token2'] = $params['access_token'];
+    $_SESSION['deezer_access_token'] = $params['access_token'];
     $user = json_decode(file_get_contents($api_url));
     //echo("Hello " . $mode);
     redirect('duo.php');

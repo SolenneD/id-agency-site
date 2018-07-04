@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - Quelle est votre niveau de Rock'Attitude ?</title>
+    <title>Pace Me - Quel est votre niveau de Rock'Attitude ?</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -23,7 +23,7 @@
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
+    <meta name="description" content="Découvrez votre niveau de Rock'Attitude et de Sex'Attitude ! Niveau sexe vous en êtes où ?">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="src/favicon.png" />
@@ -45,12 +45,12 @@
 
     </script>
 </head>
-<body id="background-questionnaire">
+<body class="vague-bottom-q" id="background-questionnaire">
 
 <?php include("include/headerBlack.php") ?>
+<div class="wrapper-qimage">
 
-
-<section id="q2" class="container col-10">
+    <section id="q2" class="container col-6">
 
 
     <div class="etapes row">
@@ -69,34 +69,71 @@
 
 
     <div class="trait"></div>
-    <h2>Vous êtes ?</h2>
+    <h2>… et sous la couette ?</h2>
 
 
     <form action="q5.php" method="post">
         <input class="cache" hidden type="text" name="q1" value="<?php echo $_POST['q1'] ?>">
         <input class="cache" hidden type="text" name="q2" value="<?php echo $_POST['q2'] ?>">
         <input class="cache" hidden type="text" name="q3" value="<?php echo $_POST['q3'] ?>">
-        <p class="align-input">
-            <input id="conquetes" type="radio" name="q4" value="conquetes">J'enchaîne les conquêtes <br>
-            <label for="conquetes"></label>
-        </p>
+        <div class="container row">
+            <div class="col-4">
+                <p class="align-input">
+                    <input id="crie" type="checkbox" name="q4A" value="crie" class="checkbox-noir" />
+                    <label for="crie">Je crie</label>
+                </p>
 
-        <p class="align-input">
-            <input id="monogame" type="radio" name="q4" value="monogame">Monogame<br>
-            <label for="monogame"></label>
-        </p>
+                <p class="align-input">
+                    <input id="domine" type="checkbox" name="q4B" value="domine" class="checkbox-noir" />
+                    <label for="domine">Je domine</label>
+                </p>
 
-        <p class="align-input">
-            <input id="libertins" type="radio" name="q4" value="libertins">Libertins<br>
-            <label for="libertins"></label>
-        </p>
+                <p class="align-input">
+                    <input id="gemis" type="checkbox" name="q4C" value="gemis" class="checkbox-noir" />
+                    <label for="gemis">Je gémis</label>
+                </p>
+            </div>
+            <div class="col-4">
+                <p class="align-input">
+                    <input id="mords" type="checkbox" name="q4D" value="mords" class="checkbox-noir" />
+                    <label for="mords">Je mords</label>
+                </p>
 
-        <input type="submit" value="Suivant">
+                <p class="align-input">
+                    <input id="auto" type="checkbox" name="q4E" value="auto" class="checkbox-noir" />
+                    <label for="auto">Je m’auto satisfait</label>
+                </p>
+
+                <p class="align-input">
+                    <input id="jouets" type="checkbox" name="q4F" value="jouets" class="checkbox-noir" />
+                    <label for="jouets">J’aime les jouets</label>
+                </p>
+            </div>
+            <div class="col-4">
+                <p class="align-input">
+                    <input id="douleur" type="checkbox" name="q4G" value="douleur" class="checkbox-noir" />
+                    <label for="douleur">J’aime la douleur</label>
+                </p>
+
+                <p class="align-input">
+                    <input id="soumets" type="checkbox" name="q4H" value="soumets" class="checkbox-noir" />
+                    <label for="soumets">Je me soumets</label>
+                </p>
+
+                <p class="align-input">
+                    <input id="plusieurs" type="checkbox" name="q4I" value="plusieurs" class="checkbox-noir" />
+                    <label for="plusieurs">On est plusieurs</label>
+                </p>
+            </div>
+        </div>
+
+        <input type="submit" value="Position suivante">
     </form>
 
 </section>
+    <div class="push"></div>
 
-
+</div>
 
 </body>
 </html>

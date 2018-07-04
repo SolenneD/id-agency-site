@@ -15,11 +15,11 @@
                 <span></span>
                 <div class="active_header" id="menu">
                     <a href="index.php">Home</a>
-<!--                <a href="labague.php">La Bague</a>-->
+                    <a href="labague.php">La Bague</a>
                     <a href="connexion.php?mode=solo">Les Modes</a>
                     <a href="propos-nous.php">À propos</a>
                     <a href="contact.php">Contact</a>
-                    <a href="mentions-legales.php">Mentions Légales</a>
+                    <a href="src/kit-presse/kit-presse.zip" download="kit-presse">Kit Presse</a>
                 </div>
             </div>
         </nav>

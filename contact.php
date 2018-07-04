@@ -1,70 +1,8 @@
-<?php
-
-//CONTACT
-
-$msg = '';
-//Don't run this unless we're handling a form submission
-if (array_key_exists('mail', $_POST)) {
-    date_default_timezone_set('Etc/UTC');
-
-    require 'PHPMailerAutoload.php';
-
-    //Create a new PHPMailer instance
-    $mail = new PHPMailer;
-    //Tell PHPMailer to use SMTP - requires a local mail server
-    //Faster and safer than using mail()
-    $mail->isSMTP();
-    $mail->SMTPAuth = true;
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Username = "pacemecontact@gmail.com";
-    $mail->Password = "iesa2018!";
-    $mail->SMTPSecure = "ssl";
-    $mail->Port = 465;
-
-    //Use a fixed address in your own domain as the from address
-    //**DO NOT** use the submitter's address here as it will be forgery
-    //and will cause your messages to fail SPF checks
-    $mail->setFrom('pacemecontact@gmail.com', 'Pace Me');
-    //Send the message to yourself, or whoever should receive contact for submissions
-    $mail->addAddress('pacemecontact@gmail.com', '');
-    //Put the submitter's address in a reply-to header
-    //This will fail if the address provided is invalid,
-    //in which case we should ignore the whole request
-    if ($mail->addReplyTo($_POST['mail'], $_POST['nom'])) {
-    $mail->Subject = 'Prise de contact paceme.com';
-    //Keep it simple - don't use HTML
-    $mail->isHTML(false);
-
-
-    //Build a simple message body
-    $mail->Body = <<<EOT
-    
-            Professionnel/Particulier: {$_POST['pp']}
-                Name: {$_POST['name']}
-                Email: {$_POST['mail']}
-                Message: {$_POST['message']}
-
-EOT;
-    //Send the message, check for errors
-    if (!$mail->send()) {
-    //The reason for failing to send will be in $mail->ErrorInfo
-    //but you shouldn't display errors to users - process the error, log it on your server.
-    $msg = 'Désolé, une erreur est survenue. Veuillez réessayer plus tard';
-    } else {
-    $msg = 'Votre message a bien été envoyé !';
-    }
-    } else {
-    $msg = 'Adresse email invalide, message ignoré.';
-    }
-}
-
-
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - Contact</title>
+    <title>Pace Me - Contact</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -85,12 +23,13 @@ EOT;
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
+    <meta name="description" content="Attiré par notre produit ? Contactez-nous.">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="src/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="js/custom.js"></script>
 
     <!--analytics-->
     <script type="text/javascript">
@@ -107,16 +46,16 @@ EOT;
 
     </script>
 </head>
-<body>
+<body class="footer-body">
 
 <?php include("include/headerWhite.php") ?>
-
-
+<div class="wrapper-plan">
 <section id="page-contact" class="container col-10">
     <section id="contact">
         <div class="trait"></div>
         <h2>Nous Contacter</h2>
-        <p>Vous avez besoins de plus d’informations <br> ou bien vous désirez des réponses à vos questions ? <br>N’hésitez pas à nous contacter, nous sommes ici pour vous aider !</p>
+        <p>Une soudaine envie de mieux nous connaître...</p>
+        <p>N’hésitez pas, nous sommes ici pour vous satisfaire !</p>
 
         <form method="post" action="core/envoi-mail.php">
             <label for="name"></label>
@@ -146,9 +85,11 @@ EOT;
         </form>
 
     </section>
+    <div class="push"></div>
+
 </section>
 
-
+</div>
 
 <?php include("include/footerWhite.php") ?>
 

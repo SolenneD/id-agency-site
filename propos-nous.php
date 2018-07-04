@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - A propos</title>
+    <title>Pace Me - A propos</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -23,7 +23,7 @@
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
+    <meta name="description" content="Découvrez l'équipe de Pace Me, la bague connectée qui gère la musique pendant votre acte sexuel">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="src/favicon.png" />
@@ -45,145 +45,98 @@
 
     </script>
 </head>
-<body class="vague-bottom">
+<body class="vague-bottom-propos">
 <?php include("include/headerWhite.php") ?>
-
+<div class="wrapper-propos">
 <section id="page-apropos" class="container col-10 row">
     <article class="col-6">
         <div class="trait"></div>
         <h2>À PROPOS DE NOUS</h2>
-        <p>PaceMe est une start-up créé en début 2018. </p>
-        <p>Notre produit s’adresse à celles et ceux qui, depuis leur adolescence rebelle, perçoivent dans les mystères du sexe et les fantasmes du rock’n’roll un seul et même mythe. </p>
-        <p>Notre équipe est composée de 9 membres dynamiques et créatifs.</p>
+        <p>Coupé en plein acte charnel à cause d’une publicité spontanée, Richard a trouvé très drôle de nous raconter cette anecdote autour de notre verre habituel du jeudi soir. Si au début tout le monde en a plaisanté, nous étions finalement content de ne pas avoir été à sa place.</p>
+        <p>Qui n’a jamais rêvé d’avoir l’atmosphère parfaite pendant son rapport sexuel ?</p>
+        <p>C’est de là que l’idée Pace Me à été créée, portée par un groupe d’amis d’enfance, ayant envie de fusionner leur passion pour le rock et leurs plaisirs charnels.</p>
     </article>
     <article class="col-6 row">
         <div class="decoration-rond decoration-rond-1"></div>
         <div class="decoration-rond decoration-rond-2"></div>
         <div class="decoration-rond decoration-rond-3"></div>
         <div>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-1">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Charlotte</p>
-                            <p>Chef de projet</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-2">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Besmire</p>
-                            <p>Graphiste</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-3">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Marianne</p>
-                            <p>UX Designer</p>
-                        </div>
-                    </div>
+
+            <div class="front photo-1">
+                <div class="block">
+                    <p class="scale-in-center">Charlotte</p>
+                    <p class="scale-in-center">Chef de projet</p>
                 </div>
             </div>
 
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-4">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Tarik</p>
-                            <p>Motion & Vidéo</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-5">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>John</p>
-                            <p>UX Designer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-6">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Thomas</p>
-                            <p>Graphiste</p>
-                        </div>
-                    </div>
+
+            <div class="front photo-2">
+                <div class="block">
+                    <p class="scale-in-center">Besmire</p>
+                    <p class="scale-in-center">Graphiste</p>
                 </div>
             </div>
 
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-7">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Solenne</p>
-                            <p>Développeuse</p>
-                        </div>
-                    </div>
+
+            <div class="front photo-3">
+                <div class="block">
+                    <p class="scale-in-center">Marianne</p>
+                    <p class="scale-in-center">UX Designer</p>
                 </div>
             </div>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-8">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Réda</p>
-                            <p>Graphiste</p>
-                        </div>
-                    </div>
+
+            <div class="front photo-4">
+                <div class="block">
+                    <p class="scale-in-center">Tarik</p>
+                    <p class="scale-in-center">Motion & Vidéo</p>
                 </div>
             </div>
-            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front photo-9">
-                        <!-- front content -->
-                    </div>
-                    <div class="back">
-                        <div class="div-back">
-                            <p>Thomas</p>
-                            <p>Motion & Vidéo</p>
-                        </div>
-                    </div>
+
+
+            <div class="front photo-5">
+                <div class="block">
+                    <p class="scale-in-center">John</p>
+                    <p class="scale-in-center">UX Designer</p>
                 </div>
             </div>
+
+
+            <div class="front photo-6">
+                <div class="block">
+                    <p class="scale-in-center">Thomas</p>
+                    <p class="scale-in-center">Graphiste</p>
+                </div>
+            </div>
+
+
+            <div class="front photo-7">
+                <div class="block">
+                    <p class="scale-in-center">Solenne</p>
+                    <p class="scale-in-center">Développeuse</p>
+                </div>
+            </div>
+
+
+            <div class="front photo-8">
+                <div class="block">
+                    <p class="scale-in-center">Reda</p>
+                    <p class="scale-in-center">Graphiste</p>
+                </div>
+            </div>
+
+
+            <div class="front photo-9">
+                <div class="block">
+                    <p class="scale-in-center">Thomas</p>
+                    <p class="scale-in-center">Motion & Vidéo</p>
+                </div>
+            </div>
+
         </div>
-
     </article>
+    <div class="push"></div>
 </section>
+</div>
 
 <?php include("include/footerWhite.php") ?>
 

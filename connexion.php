@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+include"config/settings.php";
+
+if(isset($_SESSION['deezer_access_token'])){
+    redirect('solo.php');
+}
+?><!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -23,7 +29,7 @@
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
+    <meta name="description" content="Synchronisez votre plaisir avec une des plateformes musicales">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="src/favicon.png" />
@@ -45,25 +51,35 @@
 
     </script>
 </head>
-<body>
+<body class="vague-bottom-mode">
 <?php include("include/headerWhite.php") ?>
+<div class="wrapper-mode">
+    <section id="page-connexion" class="container col-10">
+        <div class="trait"></div>
+        <h2>Les modes</h2>
+        <div class="container row">
+            <div class="col-8">
+                <p>Associée à votre bague, l’application permet d'accéder à différents modes de jeux.</p>
+                <p>Rythme, BPM, musiques, meilleures performances, retrouvez également toutes vos statistiques sur votre smartphone.</p>
+                <h3>Pace Me sera disponible le 1er Août !</h3>
 
-<section id="page-connexion" class="container col-10">
-    <div class="trait"></div>
-    <h2>Les modes</h2>
+                <p>Testez dès maintenant les différents modes de jeux de notre application !</p>
 
-    <p style="width: auto">Choississez votre plateforme de musique</p>
+                <h3>Mais avant de commencer, choisissez votre plateforme musicale :</h3>
+                <div class="margin row">
+                    <a href="deezer_auth.php" class="musique-mode deezer"></a>
+                    <p class="musique-mode spotify avenir"></p>
+                    <p class="musique-mode youtube avenir"></p>
+                </div>
 
-    <div class="margin row">
-            <a href="deezer_auth.php" class="musique-mode deezer"></a>
-            <p class="musique-mode spotify avenir"></p>
-            <p class="musique-mode youtube avenir"></p>
-    </div>
-
-
-
-
-</section>
+            </div>
+            <div class="col-4">
+                <img src="src/app.png" alt="application mobile">
+            </div>
+        </div>
+        <div class="push"></div>
+    </section>
+</div>
 
 <?php include("include/footerWhite.php") ?>
 

@@ -6,7 +6,7 @@ include('../config/settings.php');
 //si on n'a pas reçu de formulaire 
 if(empty($_POST))
 	//on redirige vers le formulire
-	redirect('../index1.php');
+	redirect('../index.php');
 //sinon (on a reçu des donnes)
 else{
 	
@@ -26,7 +26,7 @@ $error = false;
 	//si on a vu au moins une erreur
 	if($error)
 		//on redirige vers le formulaire
-		redirect('../index2.php');
+		redirect('../index.php');
 	//sinon 
 	else{
 

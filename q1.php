@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Paceme - Quelle est votre niveau de Rock'Attitude ?</title>
+    <title>Pace Me - Quel est votre niveau de Rock'Attitude ?</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120265874-1"></script>
@@ -23,7 +23,7 @@
     <!-- End Google Tag Manager -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Synchronisez passion musicale et plaisir infini avec votre nouvelle bague connectée">
+    <meta name="description" content="Découvrez votre niveau de Rock'Attitude et de Sex'Attitude ! Homme ou Femme ?">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="icon" type="image/png" href="src/favicon.png" />
@@ -45,12 +45,10 @@
 
     </script>
 </head>
-<body id="background-questionnaire">
-
+<body id="background-questionnaire" class="vague-bottom-q">
 <?php include("include/headerBlack.php") ?>
-
-
-<section id="q2" class="container col-10">
+<div class="wrapper-qimage">
+    <section id="q2" class="container col-6">
 
 
     <div class="etapes row">
@@ -74,19 +72,19 @@
 
     <form action="q2.php" method="post">
         <p class="align-input">
-            <input id="homme" type="radio" name="q1" value="homme">Un homme<br>
-            <label for="homme"></label>
+            <input required id="femme" type="radio" name="q1" value="femme">
+            <label for="femme">Une femme sensuelle</label>
         </p>
-
         <p class="align-input">
-            <input id="femme" type="radio" name="q1" value="femme">Une femme<br>
-            <label for="femme"></label>
+            <input required id="homme" type="radio" name="q1" value="homme">
+            <label for="homme">Un homme sexy</label>
         </p>
 
-        <input type="submit" value="Suivant">
+        <input type="submit" value="Position suivante">
     </form>
-
+    <div class="push"></div>
 </section>
+</div>
 
 
 </body>
